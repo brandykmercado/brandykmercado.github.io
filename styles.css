@@ -3,17 +3,25 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(120deg, #f0f4fd, #cfe3fc);
+    background: linear-gradient(120deg, #e0f7fa, #ffffff); /* Soft gradient background */
     color: #333;
 }
 
 /* Header */
 header {
-    background-color: #1e90ff;
+    background-color: #4f8a8b; /* Muted teal */
     color: white;
     padding: 2rem 0;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Image */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Circular profile picture */
+    margin-bottom: 1rem;
 }
 
 /* Navigation */
@@ -22,15 +30,21 @@ nav {
     margin: 1rem 0;
 }
 
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Adds space between links */
+}
+
 nav a {
     text-decoration: none;
-    margin: 0 1rem;
-    color: #0078d7;
+    color: #ffffff;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #004aad;
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 /* Content */
@@ -49,11 +63,29 @@ section {
 }
 
 h2 {
-    border-bottom: 2px solid #1e90ff;
+    border-bottom: 2px solid #4f8a8b;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
 
+/* Skills */
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Projects */
 .project-card {
     background: #f0f4fd;
     margin-bottom: 1rem;
@@ -79,7 +111,7 @@ a:hover {
 footer {
     text-align: center;
     padding: 1rem;
-    background: #1e90ff;
+    background: #4f8a8b;
     color: white;
     margin-top: 2rem;
     font-size: 0.9rem;
