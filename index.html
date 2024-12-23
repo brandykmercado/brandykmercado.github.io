@@ -1,152 +1,65 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Data Science Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Your Name</h1>
+            <p>Data Scientist | Machine Learning Enthusiast | Data Visualizer</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>With a strong foundation in mathematics and statistics, I apply data science techniques to uncover insights and drive data-informed decision-making. I specialize in Python, Machine Learning, and Data Visualization.</p>
+        </section>
 
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
+        <section id="skills" class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Python:</strong> Data Analysis, Pandas, NumPy</li>
+                <li><strong>Machine Learning:</strong> Regression, Classification, Clustering</li>
+                <li><strong>Data Visualization:</strong> Matplotlib, Seaborn, Tableau</li>
+                <li><strong>SQL:</strong> Complex Queries, Data Transformation</li>
+            </ul>
+        </section>
 
-header {
-    position: relative;
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
-    color: white;
-    padding: 5rem 0;
-    text-align: center;
-}
+        <section id="projects" class="container">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Project 1: Predictive Analytics with Machine Learning</h3>
+                <p>Developed a machine learning model to predict customer churn using a dataset of customer behavior. Implemented a Random Forest algorithm with a focus on feature engineering and model evaluation.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2: Data Visualization Dashboard</h3>
+                <p>Built an interactive data visualization dashboard using Tableau to showcase key business KPIs for a retail client, enabling decision-makers to identify trends and make data-driven decisions.</p>
+            </div>
+        </section>
 
-.hero {
-    background: url('https://via.placeholder.com/1500x800') no-repeat center center;
-    background-size: cover;
-    padding: 6rem 0;
-}
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <p>Email: yourname@example.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourname">LinkedIn Profile</a></p>
+            <p>GitHub: <a href="https://github.com/yourname">GitHub Profile</a></p>
+        </section>
+    </main>
 
-header .container {
-    position: relative;
-    z-index: 1;
-}
-
-header .profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-header h1 {
-    font-size: 3rem;
-    margin-top: 1rem;
-}
-
-header p {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ff6f61;
-}
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.section {
-    margin-bottom: 50px;
-}
-
-h2 {
-    font-size: 2.5rem;
-    color: #2575fc;
-    margin-bottom: 20px;
-}
-
-.skills-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.skill h3 {
-    font-size: 1.5rem;
-}
-
-.bar {
-    height: 10px;
-    background-color: #ff6f61;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-
-.project-cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.project-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(33.333% - 20px);
-    transition: transform 0.3s ease;
-    text-decoration: none;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-}
-
-.project-card img {
-    width: 100%;
-    height: auto;
-    margin-top: 10px;
-    border-radius: 8px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-@media (max-width: 768px) {
-    .project-card {
-        width: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 480px) {
-    .project-card {
-        width: 100%;
-    }
-}
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+</body>
+</html>
