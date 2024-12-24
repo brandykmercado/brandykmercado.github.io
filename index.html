@@ -134,6 +134,20 @@
             text-decoration: underline;
         }
 
+        button {
+            background-color: #4CAF50; 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px; 
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -149,7 +163,7 @@
 <header>
     <div class="header-text">
         <h1>Brandy Mercado</h1>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/brandy-mercado/">LinkedIn</a></p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/brandy-mercado/" target="_blank">LinkedIn</a></p>
     </div>
     <nav>
         <div class="nav-links">
@@ -189,18 +203,13 @@
         <h2>Projects</h2>
         <div class="project-card">
             <h3>Project 1: Data Science Fellowship Analysis</h3>
-            <p>Utilized Centers for Disease Control and Prevention (CDC) and Department of Labor (DOL) data sources to research the health and career impacts of women having children. Presented findings with a Tableau dashboard as visual aid.</p>
-<a href="https://public.tableau.com/app/profile/brandy.mercado8886/viz/HealthCareerImpactsofHavingChildren/HealthCareer" target="_blank" rel="noopener noreferrer">
-    <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; transition: background-color 0.3s ease;">
-        View Tableau Dashboard
-    </button>
-</a>
-
-<a href="https://drive.google.com/file/d/1v7YDJQY2k-EO_u2nfI2TjyBr9_TzY4rO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-    <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; transition: background-color 0.3s ease;">
-        Watch My Recorded Presentation
-    </button>
-</a>
+            <p>Utilized Centers for Disease Control and Prevention (CDC) and Department of Labor (DOL) data sources to research the health and career impacts of women having children. Presented findings with a Tableau dashboard as a visual aid.</p>
+            <a href="https://public.tableau.com/app/profile/brandy.mercado8886/viz/HealthCareerImpactsofHavingChildren/HealthCareer" target="_blank">
+                <button>View Tableau Dashboard</button>
+            </a>
+            <a href="https://drive.google.com/file/d/1v7YDJQY2k-EO_u2nfI2TjyBr9_TzY4rO/view?usp=sharing" target="_blank">
+                <button>Watch My Recorded Presentation</button>
+            </a>
         </div>
         <div class="project-card">
             <h3>Project 2: Data Visualization Dashboard</h3>
@@ -212,31 +221,28 @@
         </div>
         <div class="project-card">
             <h3>Project 4: This Very Website</h3>
-            <p>You're looking at it! Built this portfolio site from scratch with HTML and CSS, armed with nothing but curiosity, online tutorials, and a bit of stubborn determination. Proof that you can accomplish anything with enough Googling and a sprinkle of creativity.  </p>
+            <p>You're looking at it! Built this portfolio site from scratch with HTML and CSS, armed with nothing but curiosity, online tutorials, and a bit of stubborn determination. Proof that you can accomplish anything with enough Googling and a sprinkle of creativity.</p>
         </div>
     </section>
 
     <!-- Professional Experience Section -->
-<section id="experience" class="container">
-    <h2>Professional Experience</h2>
-    <p>    
-    From my early days in the digital marketing industry to my current leadership role in healthcare, my career has been a dynamic journey of adaptation. In my current role as VP of Central Data Analytics and Affordability, I lead a team that's driving advanced analytics and modeling to enhance operational efficiency and affordability. Along the way, I've developed a deep expertise in data storytelling and using analytics to empower business outcomes. Curious about the full story?
-    </p>
-    <div style="text-align: center; margin-top: 1rem;">
-        <a href="https://drive.google.com/file/d/1n-xXQPg2hwnl-hxn6Xx4cZ9rawixZskl/view?usp=sharing" target="_blank" 
-           style="text-decoration: none; background-color: #0078d7; color: white; padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: bold; transition: background-color 0.3s ease;">
-            💼 View My Resume
-        </a>
-    </div>
-</section>
-    
+    <section id="experience" class="container">
+        <h2>Professional Experience</h2>
+        <p>From my early days in the digital marketing industry to my current leadership role in healthcare, my career has been a dynamic journey of adaptation. In my current role as VP of Central Data Analytics and Affordability, I lead a team that's driving advanced analytics and modeling to enhance operational efficiency and affordability. Curious about the full story?</p>
+        <div style="text-align: center; margin-top: 1rem;">
+            <a href="https://drive.google.com/file/d/1n-xXQPg2hwnl-hxn6Xx4cZ9rawixZskl/view?usp=sharing" target="_blank" 
+               style="text-decoration: none; background-color: #0078d7; color: white; padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: bold; transition: background-color 0.3s ease;">
+                💼 View My Resume
+            </a>
+        </div>
+    </section>
+
     <!-- Education Section -->
     <section id="education" class="container">
         <h2>Education</h2>
         <p><strong>The University of Texas at Austin</strong><br>Mathematics (BS Math- Actuarial Sciences) & Business Foundations, Dec 2015</p>
         <p><strong>CorrelationOne</strong><br>Data Science Fellow (Honors Certificate), Apr 2021- Sep 2021</p>
     </section>
-    
 </main>
 
 <footer>
