@@ -11,17 +11,39 @@ body {
 header {
     background-color: #1f4068; /* Deep blue for header */
     color: white;
-    padding: 2rem 0;
+    padding: 1rem 0; /* Reduced padding for less space */
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Profile Image */
+.header-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.header-text {
+    text-align: left;
+}
+
 .profile-img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0;
 }
 
 /* Navigation */
@@ -121,4 +143,23 @@ footer {
     color: white;
     margin-top: 2rem;
     font-size: 0.9rem;
+}
+
+/* Contact Section */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+/* Adding some additional padding to create balance */
+section {
+    padding: 2rem;
+}
+
+/* Small adjustments to spacing between sections */
+.container {
+    padding: 1.5rem;
 }
