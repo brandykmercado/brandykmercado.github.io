@@ -15,57 +15,153 @@
         }
 
         /* Header */
+        header {
+            position: relative;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/028/717/369/non_2x/abstract-background-with-curve-modern-lines-on-dark-blue-background-illustration-horizontal-template-background-banner-vector.jpg');
+            background-size: cover;
+            background-position: center center;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+            z-index: 1;
+        }
+
+        .header-text {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-text h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-text p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .header-text a {
+            color: #00b4d8;
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid #00b4d8;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        .header-text a:hover {
+            background-color: #00b4d8;
+            color: white;
+        }
+
+        /* Navigation */
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            background-color: #0078d7; /* Blue for pill effect */
+            border-radius: 50px; /* Pill shape */
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #00b4d8; /* Soft turquoise for hover */
+        }
+
+        /* Content */
+        .container {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            border-bottom: 2px solid #1f4068;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Skills */
+        .skills-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            margin: 0.5rem;
+            border-radius: 8px;
+            width: 150px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #1f4068;
+            color: white;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
 <header>
-    <div class="header-content">
+    <div class="header-text">
         <h1>Brandy Mercado</h1>
-        <p><a href="https://www.linkedin.com/in/brandy-mercado/" target="_blank">Connect with me on LinkedIn</a></p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/brandy-mercado/" target="_blank">LinkedIn</a></p>
     </div>
-</header>
-
-<style>
-header {
-    background: linear-gradient(to right, #1f4068, #4e73df), url('https://source.unsplash.com/1600x900/?technology');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 3rem 0;
-    position: relative;
-}
-
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-    margin: 0;
-}
-
-p {
-    margin: 1rem 0 0;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    background-color: #0078d7;
-    padding: 0.5rem 1.5rem;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-a:hover {
-    background-color: #005bb5;
-}
-</style>
 
 
         /* Navigation */
