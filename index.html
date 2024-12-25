@@ -16,59 +16,83 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #ff7a00, #d400a5); /* Modern gradient background */
+            position: relative;
+            background-image: url('https://marketplace.canva.com/EAENvp21inc/1/0/1600w/canva-simple-work-linkedin-banner-qt_TMRJF4m0.jpg');
             background-size: cover;
             background-position: center center;
             color: white;
-            padding: 4rem 0; /* Increased padding for spacious feel */
+            padding: 3rem 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            animation: fadeIn 2s forwards; /* Fade-in animation for the header */
+            overflow: hidden;
         }
 
-        /* Name Focal Point */
-        .name-focal {
-            font-size: 3.5rem; /* Larger size for prominence */
-            margin: 0;
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+            z-index: 1;
+        }
+
+        .header-text {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-text h1 {
+            font-size: 3rem;
             font-weight: bold;
-            animation: nameHighlight 1.5s ease-out forwards; /* Animation to highlight your name */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 0.5rem;
         }
 
-        /* LinkedIn Link Styling */
-        .linkedin-text {
+        .header-text p {
             font-size: 1.2rem;
-            margin-top: 1rem;
-            opacity: 0;
-            animation: fadeInText 2s 1s forwards; /* Animation to fade in LinkedIn text */
+            margin: 0;
         }
 
-        .linkedin-link {
-            text-decoration: none;
+        .header-text a {
             color: #00b4d8;
             font-weight: bold;
-            transition: color 0.3s ease;
+            text-decoration: none;
+            border: 2px solid #00b4d8;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 1rem;
+            display: inline-block;
         }
 
-        .linkedin-link:hover {
-            color: #0078d7; /* Slightly darker blue on hover */
+        .header-text a:hover {
+            background-color: #00b4d8;
+            color: white;
         }
 
         /* Navigation */
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
         .nav-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1rem;
-            opacity: 0;
-            animation: fadeInText 2s 1s forwards; /* Animation for navigation items */
+            gap: 1rem;
         }
 
         nav a {
             text-decoration: none;
             color: white;
             font-weight: bold;
-            padding: 0.5rem 1.5rem;
+            padding: 0.5rem 1rem;
             background-color: #0078d7; /* Blue for pill effect */
             border-radius: 50px; /* Pill shape */
             transition: background-color 0.3s ease;
@@ -121,42 +145,6 @@
             transform: translateY(-5px);
         }
 
-        /* Projects */
-        .project-card {
-            background: #f0f4fd;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-card h3 {
-            margin-top: 0;
-        }
-
-        a {
-            color: #0078d7;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        button {
-            background-color: #4CAF50; 
-            color: white; 
-            padding: 10px 20px; 
-            border: none; 
-            cursor: pointer; 
-            border-radius: 5px; 
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #3e8e41;
-        }
-
         /* Footer */
         footer {
             text-align: center;
@@ -166,32 +154,13 @@
             margin-top: 2rem;
             font-size: 0.9rem;
         }
-
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        /* Highlighting animation for your name */
-        @keyframes nameHighlight {
-            0% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Fade-in text animation for LinkedIn and nav */
-        @keyframes fadeInText {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
     </style>
 </head>
 <body>
 <header>
     <div class="header-text">
-        <h1 class="name-focal">Brandy Mercado</h1>
-        <p class="linkedin-text">Connect with me on <a href="https://www.linkedin.com/in/brandy-mercado/" target="_blank" class="linkedin-link">LinkedIn</a></p>
+        <h1>Brandy Mercado</h1>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/brandy-mercado/" target="_blank">LinkedIn</a></p>
     </div>
     <nav>
         <div class="nav-links">
@@ -252,10 +221,29 @@
             <p>You're looking at it! Built this portfolio using HTML, CSS, and a bit of JavaScript to showcase my skills and experience as a data scientist. <a href="#">View Source Code</a></p>
         </div>
     </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="container">
+        <h2>Professional Experience</h2>
+        <p>From my early days in the digital marketing industry to my current leadership role in healthcare, my career has been a dynamic journey of adaptation. In my current role as VP of Central Data Analytics and Affordability, I lead a team that's driving advanced analytics and modeling to enhance operational efficiency and affordability. Curious about the full story? Check out my resume.</p>
+        <div style="text-align: center; margin-top: 1rem;">
+            <a href="https://drive.google.com/file/d/1n-xXQPg2hwnl-hxn6Xx4cZ9rawixZskl/view?usp=sharing" target="_blank" 
+               style="text-decoration: none; background-color: #0078d7; color: white; padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: bold; transition: background-color 0.3s ease;">
+                💼 View My Resume
+            </a>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="container">
+        <h2>Education</h2>
+        <p><strong>The University of Texas at Austin</strong><br>Mathematics (BS Math- Actuarial Sciences) & Business Foundations, Dec 2015</p>
+        <p><strong>CorrelationOne</strong><br>Data Science Fellow (Honors Certificate), Apr 2021- Sep 2021</p>
+    </section>
 </main>
 
 <footer>
-    <p>&copy; 2024 Brandy Mercado | All rights reserved.</p>
+    <p>&copy; 2024 Brandy Mercado</p>
 </footer>
 </body>
 </html>
