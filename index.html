@@ -48,10 +48,15 @@
             color: #00b4d8;
             font-weight: bold;
             transition: color 0.3s ease;
+            border: 2px solid #00b4d8;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            background-color: transparent; /* Transparent background */
         }
 
         .linkedin-link:hover {
             color: #0078d7; /* Slightly darker blue on hover */
+            border-color: #0078d7; /* Darker border on hover */
         }
 
         /* Navigation */
@@ -157,6 +162,21 @@
             background-color: #3e8e41;
         }
 
+        /* Grey Buttons for Project 1 */
+        .grey-button {
+            background-color: #d3d3d3; /* Light grey */
+            color: #333; /* Dark text for contrast */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .grey-button:hover {
+            background-color: #a9a9a9; /* Darker grey on hover */
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -191,11 +211,7 @@
 <header>
     <div class="header-text">
         <h1 class="name-focal">Brandy Mercado</h1>
-        <p class="linkedin-text">Connect with me on 
-            <a href="https://www.linkedin.com/in/brandy-mercado/" target="_blank" class="linkedin-button">
-                LinkedIn
-            </a>
-        </p>
+        <p class="linkedin-text">Connect with me on <a href="https://www.linkedin.com/in/brandy-mercado/" target="_blank" class="linkedin-link">LinkedIn</a></p>
     </div>
     <nav>
         <div class="nav-links">
@@ -207,28 +223,6 @@
         </div>
     </nav>
 </header>
-
-<style>
-    /* LinkedIn Button */
-    .linkedin-button {
-        display: inline-block;
-        padding: 0.5rem 2rem;
-        border: 2px solid #0078d7;
-        border-radius: 50px;
-        color: #0078d7;
-        font-weight: bold;
-        text-decoration: none;
-        text-align: center;
-        background-color: transparent;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .linkedin-button:hover {
-        background-color: #0078d7;
-        color: white;
-    }
-</style>
-
 
 <main>
     <!-- About Section -->
@@ -255,31 +249,16 @@
     <!-- Projects Section -->
     <section id="projects" class="container">
         <h2>Projects</h2>
-<div class="project-card">
-    <h3>Project 1: Data Science Fellowship Analysis</h3>
-    <p>Utilized Centers for Disease Control and Prevention (CDC) and Department of Labor (DOL) data sources to research the health and career impacts of women having children. My team used Python for exploratory analysis and data cleanup and Tableau to build a dashboard for visual aid. </p>
-    <a href="https://public.tableau.com/app/profile/brandy.mercado8886/viz/HealthCareerImpactsofHavingChildren/HealthCareer" target="_blank">
-        <button class="grey-button">View Tableau Dashboard</button>
-    </a>
-    <a href="https://drive.google.com/file/d/1v7YDJQY2k-EO_u2nfI2TjyBr9_TzY4rO/view?usp=sharing" target="_blank">
-        <button class="grey-button">Watch My Recorded Presentation</button>
-    </a>
-</div>
-/* Grey Buttons for Project 1 */
-.grey-button {
-    background-color: #d3d3d3; /* Light grey */
-    color: #333; /* Dark text for contrast */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.grey-button:hover {
-    background-color: #a9a9a9; /* Darker grey on hover */
-}
-
+        <div class="project-card">
+            <h3>Project 1: Data Science Fellowship Analysis</h3>
+            <p>Utilized Centers for Disease Control and Prevention (CDC) and Department of Labor (DOL) data sources to research the health and career impacts of women having children. My team used Python for exploratory analysis and data cleanup and Tableau to build a dashboard for visual aid. </p>
+            <a href="https://public.tableau.com/app/profile/brandy.mercado8886/viz/HealthCareerImpactsofHavingChildren/HealthCareer" target="_blank">
+                <button class="grey-button">View Tableau Dashboard</button>
+            </a>
+            <a href="https://drive.google.com/file/d/1v7YDJQY2k-EO_u2nfI2TjyBr9_TzY4rO/view?usp=sharing" target="_blank">
+                <button class="grey-button">Watch My Recorded Presentation</button>
+            </a>
+        </div>
         <div class="project-card">
             <h3>Project 2: Data Visualization Dashboard</h3>
             <p>Built an interactive data visualization dashboard using Tableau to showcase key business KPIs for a retail client, enabling decision-makers to identify trends and make data-driven decisions. <a href="#">View Project</a></p>
@@ -293,6 +272,26 @@
             <p>You're looking at it! Built this portfolio using HTML, CSS, and a bit of JavaScript to showcase my skills and experience as a data scientist. <a href="#">View Source Code</a></p>
         </div>
     </section>
+    
+    <!-- Professional Experience Section -->
+    <section id="experience" class="container">
+        <h2>Professional Experience</h2>
+        <p>From my early days in the digital marketing industry to my current leadership role in healthcare, my career has been a dynamic journey of adaptation. In my current role as VP of Central Data Analytics and Affordability, I lead a team that's driving advanced analytics and modeling to enhance operational efficiency and affordability. Curious about the full story? Check out my resume.</p>
+        <div style="text-align: center; margin-top: 1rem;">
+            <a href="https://drive.google.com/file/d/1n-xXQPg2hwnl-hxn6Xx4cZ9rawixZskl/view?usp=sharing" target="_blank" 
+               style="text-decoration: none; background-color: #0078d7; color: white; padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: bold; transition: background-color 0.3s ease;">
+                💼 View My Resume
+            </a>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="container">
+        <h2>Education</h2>
+        <p><strong>The University of Texas at Austin</strong><br>Mathematics (BS Math- Actuarial Sciences) & Business Foundations, Dec 2015</p>
+        <p><strong>CorrelationOne</strong><br>Data Science Fellow (Honors Certificate), Apr 2021- Sep 2021</p>
+    </section>
+</main>
 </main>
 
 <footer>
