@@ -1,252 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brandy Mercado - Portfolio</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #f0f4fd, #e0e8ff); /* Fresh gradient background */
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            background-image: url('https://static.vecteezy.com/system/resources/previews/028/717/369/non_2x/abstract-background-with-curve-modern-lines-on-dark-blue-background-illustration-horizontal-template-background-banner-vector.jpg'); /* Background image */
-            background-size: cover;
-            background-position: center center;
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-text {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .header-contact {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-
-        .header-contact p {
-            margin: 0;
-        }
-
-        /* Navigation */
-        nav {
-            text-align: center;
-            margin: 1rem 0;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            padding: 0.5rem 1rem;
-            background-color: #0078d7; /* Blue for pill effect */
-            border-radius: 50px; /* Pill shape */
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #00b4d8; /* Soft turquoise for hover */
-        }
-
-        /* Content */
-        .container {
-            padding: 2rem;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        section {
-            margin-bottom: 2rem;
-            background: #ffffff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            border-bottom: 2px solid #1f4068;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Skills */
-        .skills-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .skill {
-            background-color: #f1f1f1;
-            padding: 1rem;
-            margin: 0.5rem;
-            border-radius: 8px;
-            width: 150px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .skill:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Projects */
-        .project-card {
-            background: #f0f4fd;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-card h3 {
-            margin-top: 0;
-        }
-
-        a {
-            color: #0078d7;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        button {
-            background-color: #4CAF50; 
-            color: white; 
-            padding: 10px 20px; 
-            border: none; 
-            cursor: pointer; 
-            border-radius: 5px; 
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #3e8e41;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #1f4068;
-            color: white;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-        }
-    </style>
-</head>
-<body>
 <header>
-    <div class="header-text">
-        <h1>Brandy Mercado</h1>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/brandy-mercado/" target="_blank">LinkedIn</a></p>
-    </div>
-    <nav>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
+    <div class="header-overlay">
+        <div class="header-text">
+            <h1>Brandy Mercado</h1>
+            <p>
+                <a href="https://www.linkedin.com/in/brandy-mercado/" target="_blank" class="linkedin-button">
+                    Connect with me on LinkedIn
+                </a>
+            </p>
         </div>
-    </nav>
+        <nav>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+            </div>
+        </nav>
+    </div>
 </header>
 
-<main>
-    <!-- About Section -->
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <p>With a strong foundation in mathematics and statistics, I apply data science techniques to uncover insights and drive data-informed decision-making. When I’m not diving into data, you’ll find me exploring my creative side with 3D printing and modeling, scaling rock walls, or kicking a soccer ball around.</p>
-    </section>
+<style>
+    /* Header */
+    header {
+        position: relative;
+        background-image: url('https://static.vecteezy.com/system/resources/previews/028/717/369/non_2x/abstract-background-with-curve-modern-lines-on-dark-blue-background-illustration-horizontal-template-background-banner-vector.jpg');
+        background-size: cover;
+        background-position: center center;
+        color: white;
+        text-align: center;
+        padding: 3rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
 
-    <!-- Skills Section -->
-    <section id="skills" class="container">
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <div class="skill">SQL</div>
-            <div class="skill">Python</div>
-            <div class="skill">Tableau</div>
-            <div class="skill">Data Visualization</div>
-            <div class="skill">Statistical Analysis</div>
-            <div class="skill">Forecasting</div>
-            <div class="skill">Innovation</div>
-            <div class="skill">Team Leadership</div>
-        </div>
-    </section>
+    .header-overlay {
+        position: relative;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+        padding: 3rem 0;
+    }
 
-    <!-- Projects Section -->
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Project 1: Data Science Fellowship Analysis</h3>
-            <p>Utilized Centers for Disease Control and Prevention (CDC) and Department of Labor (DOL) data sources to research the health and career impacts of women having children. My team used Python for exploratory analysis and data cleanup and Tableau to build a dashboard for visual aid. </p>
-            <a href="https://public.tableau.com/app/profile/brandy.mercado8886/viz/HealthCareerImpactsofHavingChildren/HealthCareer" target="_blank">
-                <button>View Tableau Dashboard</button>
-            </a>
-            <a href="https://drive.google.com/file/d/1v7YDJQY2k-EO_u2nfI2TjyBr9_TzY4rO/view?usp=sharing" target="_blank">
-                <button>Watch My Recorded Presentation</button>
-            </a>
-        </div>
-        <div class="project-card">
-            <h3>Project 2: Data Visualization Dashboard</h3>
-            <p>Built an interactive data visualization dashboard using Tableau to showcase key business KPIs for a retail client, enabling decision-makers to identify trends and make data-driven decisions. <a href="#">View Project</a></p>
-        </div>
-        <div class="project-card">
-            <h3>Project 3: Financial Forecasting Model</h3>
-            <p>Created a time series forecasting model for predicting monthly revenue and expense trends. Used Python to analyze historical data and implement seasonal adjustments. <a href="#">View Project</a></p>
-        </div>
-        <div class="project-card">
-            <h3>Project 4: This Very Website</h3>
-            <p>You're looking at it! Built this portfolio site from scratch with HTML and CSS, armed with nothing but curiosity, online tutorials, and a bit of stubborn determination. Proof that you can accomplish anything with enough Googling and a sprinkle of creativity.</p>
-        </div>
-    </section>
+    .header-text h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        margin: 0;
+    }
 
-    <!-- Professional Experience Section -->
-    <section id="experience" class="container">
-        <h2>Professional Experience</h2>
-        <p>From my early days in the digital marketing industry to my current leadership role in healthcare, my career has been a dynamic journey of adaptation. In my current role as VP of Central Data Analytics and Affordability, I lead a team that's driving advanced analytics and modeling to enhance operational efficiency and affordability. Curious about the full story? Check out my resume.</p>
-        <div style="text-align: center; margin-top: 1rem;">
-            <a href="https://drive.google.com/file/d/1n-xXQPg2hwnl-hxn6Xx4cZ9rawixZskl/view?usp=sharing" target="_blank" 
-               style="text-decoration: none; background-color: #0078d7; color: white; padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: bold; transition: background-color 0.3s ease;">
-                💼 View My Resume
-            </a>
-        </div>
-    </section>
+    .header-text p {
+        margin: 1rem 0 0;
+        font-size: 1.2rem;
+    }
 
-    <!-- Education Section -->
-    <section id="education" class="container">
-        <h2>Education</h2>
-        <p><strong>The University of Texas at Austin</strong><br>Mathematics (BS Math- Actuarial Sciences) & Business Foundations, Dec 2015</p>
-        <p><strong>CorrelationOne</strong><br>Data Science Fellow (Honors Certificate), Apr 2021- Sep 2021</p>
-    </section>
-</main>
+    .linkedin-button {
+        text-decoration: none;
+        background-color: #0078d7;
+        color: white;
+        padding: 0.6rem 1.2rem;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
 
-<footer>
-    <p>&copy; 2024 Brandy Mercado</p>
-</footer>
-</body>
-</html>
+    .linkedin-button:hover {
+        background-color: #005bb5;
+    }
+
+    /* Navigation */
+    nav .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+        background-color: #0078d7;
+        color: white;
+    }
+</style>
