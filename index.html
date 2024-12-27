@@ -76,43 +76,42 @@ header p {
         .nav-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 1rem;
             margin-top: 1rem;
             opacity: 0;
+            flex-wrap: wrap; /* Ensure wrapping on smaller screens */
             animation: fadeInText 2s 1s forwards; /* Animation for navigation items */
         }
 
-/* Navigation Bar Styles */
-nav {
-    display: flex; /* Use Flexbox for layout */
-    justify-content: center; /* Center the links */
-    align-items: center;
-    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
-    padding: 0.5rem 1rem; /* Space around the bar */
-    background-color: #1a1a2e; /* Matches header color */
-    width: 100%; /* Ensures full width */
-    box-sizing: border-box; /* Includes padding in width */
-    overflow-x: hidden; /* Prevent content overflow */
-}
 
+/* Navigation Bar Styles */
+/* Adjusted Navigation Bar Styles */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow links to wrap if needed */
+    padding: 0.5rem; /* Reduce horizontal padding */
+    background-color: #1a1a2e; 
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent overflow */
+}
 
 nav a {
-    color: white; /* Link color */
-    text-decoration: none; /* No underlines */
-    display: inline-block; /* Keeps buttons in line */
-    padding: 0.5rem 1rem; /* Add space around links */
-    margin: 0.1rem; /* Small gap between links */
-    font-size: 1rem; /* Default font size */
-    border: 2px solid white; /* Outline for pill look */
-    border-radius: 25px; /* Fully rounded corners for pill effect */
-    box-sizing: border-box; /* Prevent padding from increasing the width */
-    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+    color: white; 
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.4rem 1rem; /* Adjust padding for smaller buttons */
+    margin: 0; /* Remove margin to avoid extra space */
+    font-size: 0.9rem; /* Slightly smaller text */
+    border: 2px solid white; 
+    border-radius: 25px;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-nav a:hover {
-    background-color: white; /* White background on hover */
-    color: #1a1a2e; /* Text matches header on hover */
-}
+
 
 
 /* Mobile-Friendly Adjustments */
