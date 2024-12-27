@@ -82,19 +82,45 @@ header p {
             animation: fadeInText 2s 1s forwards; /* Animation for navigation items */
         }
 
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            padding: 0.5rem 1.5rem;
-            background-color: #0078d7; /* Blue for pill effect */
-            border-radius: 50px; /* Pill shape */
-            transition: background-color 0.3s ease;
-        }
+/* Navigation Bar Styles */
+nav {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center the links */
+    align-items: center;
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+    padding: 0.5rem 1rem; /* Space around the bar */
+    background-color: #1a1a2e; /* Matches header color */
+    width: 100%; /* Ensures full width */
+    box-sizing: border-box; /* Includes padding in width */
+}
 
-        nav a:hover {
-            background-color: #00b4d8; /* Soft turquoise for hover */
-        }
+nav a {
+    color: white; /* Link color */
+    text-decoration: none; /* No underlines */
+    padding: 0.5rem 1rem; /* Add space around links */
+    margin: 0.2rem; /* Small gap between links */
+    font-size: 1rem; /* Default font size */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+nav a:hover {
+    background-color: #333; /* Subtle hover effect */
+}
+
+/* Mobile-Friendly Adjustments */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        padding: 1rem; /* Add padding for spacing */
+    }
+
+    nav a {
+        font-size: 0.9rem; /* Slightly smaller text for small screens */
+        padding: 0.5rem; /* Adjust link padding */
+    }
+}
+
 
         /* Content */
         .container {
