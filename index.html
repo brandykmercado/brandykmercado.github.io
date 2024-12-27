@@ -76,32 +76,33 @@ header p {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 0; /* Removed margin-top to avoid extra space */
+    margin: 0; /* Ensure no extra margin */
     opacity: 0;
     flex-wrap: wrap; /* Ensure wrapping on smaller screens */
     animation: fadeInText 2s 1s forwards; /* Animation for navigation items */
 }
 
 /* Navigation Bar Styles */
-/* Adjusted Navigation Bar Styles */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Allow links to wrap if needed */
     padding: 0.5rem; /* Reduced padding to prevent extra space */
-    background-color: #1a1a2e; 
+    background-color: #1a1a2e; /* Solid background color */
     width: 100%; /* Full width */
     box-sizing: border-box;
     overflow: hidden; /* Prevent overflow */
     box-shadow: none; /* Removed box-shadow to avoid any shadowing under nav */
+    border-bottom: none; /* Ensure no border or line under the nav */
 }
 
+/* Navigation Link Styles */
 nav a {
     color: white; 
     text-decoration: none;
     display: inline-block;
-    padding: 0.4rem 1rem; /* Adjusted padding for smaller buttons */
+    padding: 0.4rem 1rem; /* Adjust padding for smaller buttons */
     margin: 0; /* Removed margin to avoid extra space */
     font-size: 0.9rem; /* Slightly smaller text */
     border: 2px solid white; 
@@ -122,6 +123,7 @@ nav a {
         padding: 0.5rem; /* Adjust link padding */
     }
 }
+
 
 
 
