@@ -94,14 +94,18 @@ nav {
     box-sizing: border-box; /* Includes padding in width */
     overflow-x: hidden; /* Prevent content overflow */
 }
+
+
 nav a {
     color: white; /* Link color */
     text-decoration: none; /* No underlines */
+    display: inline-block; /* Keeps buttons in line */
     padding: 0.5rem 1rem; /* Add space around links */
-    margin: 0.2rem; /* Small gap between links */
+    margin: 0.1rem; /* Small gap between links */
     font-size: 1rem; /* Default font size */
     border: 2px solid white; /* Outline for pill look */
     border-radius: 25px; /* Fully rounded corners for pill effect */
+    box-sizing: border-box; /* Prevent padding from increasing the width */
     transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
 }
 
