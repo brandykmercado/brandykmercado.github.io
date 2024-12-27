@@ -100,13 +100,16 @@ nav a {
     padding: 0.5rem 1rem; /* Add space around links */
     margin: 0.2rem; /* Small gap between links */
     font-size: 1rem; /* Default font size */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth hover effect */
+    border: 2px solid white; /* Outline for pill look */
+    border-radius: 25px; /* Fully rounded corners for pill effect */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
 }
 
 nav a:hover {
-    background-color: #333; /* Subtle hover effect */
+    background-color: white; /* White background on hover */
+    color: #1a1a2e; /* Text matches header on hover */
 }
+
 
 /* Mobile-Friendly Adjustments */
 @media screen and (max-width: 768px) {
