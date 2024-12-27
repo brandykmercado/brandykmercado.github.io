@@ -71,18 +71,16 @@ header p {
             color: #0078d7; /* Slightly darker blue on hover */
             border-color: #0078d7; /* Darker border on hover */
         }
-
-        /* Navigation */
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
-            opacity: 0;
-            flex-wrap: wrap; /* Ensure wrapping on smaller screens */
-            animation: fadeInText 2s 1s forwards; /* Animation for navigation items */
-        }
-
+/* Navigation */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0; /* Removed margin-top to avoid extra space */
+    opacity: 0;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    animation: fadeInText 2s 1s forwards; /* Animation for navigation items */
+}
 
 /* Navigation Bar Styles */
 /* Adjusted Navigation Bar Styles */
@@ -91,28 +89,26 @@ nav {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Allow links to wrap if needed */
-    padding: 0.5rem; /* Reduce horizontal padding */
+    padding: 0.5rem; /* Reduced padding to prevent extra space */
     background-color: #1a1a2e; 
     width: 100%; /* Full width */
     box-sizing: border-box;
     overflow: hidden; /* Prevent overflow */
+    box-shadow: none; /* Removed box-shadow to avoid any shadowing under nav */
 }
 
 nav a {
     color: white; 
     text-decoration: none;
     display: inline-block;
-    padding: 0.4rem 1rem; /* Adjust padding for smaller buttons */
-    margin: 0; /* Remove margin to avoid extra space */
+    padding: 0.4rem 1rem; /* Adjusted padding for smaller buttons */
+    margin: 0; /* Removed margin to avoid extra space */
     font-size: 0.9rem; /* Slightly smaller text */
     border: 2px solid white; 
     border-radius: 25px;
     box-sizing: border-box;
     transition: background-color 0.3s, color 0.3s;
 }
-
-
-
 
 /* Mobile-Friendly Adjustments */
 @media screen and (max-width: 768px) {
@@ -126,6 +122,7 @@ nav a {
         padding: 0.5rem; /* Adjust link padding */
     }
 }
+
 
 
         /* Content */
