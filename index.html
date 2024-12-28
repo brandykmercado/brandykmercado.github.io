@@ -126,6 +126,33 @@ nav a {
 }
 
 
+/*Experience*/
+        .experience-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.experience-card {
+    background: #f0f4fd;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
 
 
         /* Content */
@@ -327,6 +354,20 @@ nav a {
                 💼 View My Resume
             </a>
         </div>
+        <div class="experience-cards">
+    <!-- Experience Card 1 -->
+    <div class="experience-card">
+        <h3>VP, Central Data Analytics and Affordability</h3>
+        <p>Key achievements, responsibilities, etc.</p>
+    </div>
+
+    <!-- Experience Card 2 -->
+    <div class="experience-card">
+        <h3>Previous Role Title</h3>
+        <p>Key achievements, responsibilities, etc.</p>
+    </div>
+</div>
+
     </section>
 
     <!-- Education Section -->
