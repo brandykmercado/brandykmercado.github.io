@@ -4,200 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            background-color: #f4f4f4;
         }
 
         header {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 20px 0;
         }
 
         header h1 {
             margin: 0;
         }
 
-        header p {
-            margin: 5px;
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
         }
 
-        section {
-            padding: 20px;
-        }
-
-        .content-section {
-            background-color: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .content-section h2 {
-            margin-top: 0;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .card h3 {
-            margin-top: 0;
-        }
-
-        .card ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .card ul li {
-            margin-bottom: 10px;
-        }
-
-        .card a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-
-        .card a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        /* Adjustments for layout and spacing */
-        .top-section {
+        .main-content {
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
-            padding: 20px;
+            align-items: center;
+            padding: 30px 0;
         }
 
-        .top-section img {
+        .about-me img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
+            object-fit: cover;
         }
 
-        .top-section h2 {
-            margin-top: 15px;
+        .about-me {
+            text-align: center;
+            margin-bottom: 40px;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header {
-                padding: 15px;
-            }
+        .about-me p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
 
-            .top-section img {
-                width: 120px;
-                height: 120px;
-            }
+        section {
+            width: 100%;
+            margin-bottom: 40px;
+        }
 
-            .top-section h2 {
-                font-size: 18px;
-            }
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
 
-            .grid-container {
+        .experience, .education, .skills, .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .experience div, .education div, .skills div, .projects div {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience div h3, .education div h3, .skills div h3, .projects div h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .experience div p, .education div p, .skills div p, .projects div p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        @media screen and (max-width: 768px) {
+            .experience, .education, .skills, .projects {
                 grid-template-columns: 1fr;
             }
 
-            footer {
-                font-size: 12px;
-                padding: 10px;
+            .container {
+                width: 95%;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Data Enthusiast | Storyteller | Problem Solver</p>
-    </header>
 
-    <section class="top-section">
-        <img src="your-photo.jpg" alt="Your photo">
-        <h2>With a strong foundation in mathematics and statistics, I apply data science techniques to uncover insights and drive data-informed decision-making. I specialize in SQL, Machine Learning, and Data Visualization.</h2>
-    </section>
+<header>
+    <h1>Your Portfolio</h1>
+</header>
 
-    <section>
-        <div class="content-section">
+<div class="container">
+    <div class="main-content">
+        <div class="about-me">
+            <img src="your-photo.jpg" alt="Your Photo">
+            <p>With a strong foundation in mathematics and statistics, I apply data science techniques to uncover insights and drive data-informed decision-making. I specialize in SQL, Machine Learning, and Data Visualization.</p>
+        </div>
+
+        <section class="experience">
             <h2>Experience</h2>
-            <div class="grid-container">
-                <!-- Your original experience content -->
-                <div class="card">
-                    <h3>VP, Central Data Analytics and Affordability</h3>
-                    <p>Company Name - Date Range</p>
-                    <ul>
-                        <li>Managed cross-functional teams in implementing data-driven strategies to optimize affordability and cost management.</li>
-                        <li>Developed data models to predict cost trends, contributing to a 15% reduction in operational costs.</li>
-                        <li>Collaborated with leadership to align data analytics strategies with business objectives.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Director, Data Analytics</h3>
-                    <p>Company Name - Date Range</p>
-                    <ul>
-                        <li>Led the data analytics team to improve reporting accuracy and process efficiency for better decision-making.</li>
-                        <li>Developed predictive models for forecasting customer behavior and business outcomes.</li>
-                    </ul>
-                </div>
-                <!-- Add more experience entries as necessary -->
+            <div>
+                <h3>VP, Central Data Analytics and Affordability</h3>
+                <p>Led data analytics initiatives for a large healthcare company, working closely with accounting, revenue, care, and value teams to optimize affordability and operational performance.</p>
             </div>
-        </div>
-    </section>
+            <div>
+                <h3>Director of Data Analytics</h3>
+                <p>Managed a team of analysts, driving strategic insights to optimize the company's financial performance, improve cost-efficiency, and align healthcare objectives with analytics-driven strategies.</p>
+            </div>
+        </section>
 
-    <section>
-        <div class="content-section">
+        <section class="education">
             <h2>Education</h2>
-            <div class="grid-container">
-                <!-- Your original education content -->
-                <div class="card">
-                    <h3>Data Science Fellowship</h3>
-                    <p>Institution Name - Date Range</p>
-                    <ul>
-                        <li>Completed an intensive Data Science program focused on Machine Learning, Data Analytics, and Data Visualization.</li>
-                        <li>Developed predictive models using Python and R, applying advanced statistical techniques.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Bachelor's in Mathematics</h3>
-                    <p>Institution Name - Date Range</p>
-                    <ul>
-                        <li>Graduated with a focus on applied statistics and mathematical modeling.</li>
-                    </ul>
-                </div>
-                <!-- Add more education entries as necessary -->
+            <div>
+                <h3>Data Science Fellowship</h3>
+                <p>Completed a comprehensive Data Science fellowship focused on machine learning, SQL, Python, and data visualization.</p>
             </div>
-        </div>
-    </section>
+            <div>
+                <h3>Bachelor's Degree in Mathematics</h3>
+                <p>Graduated with a strong focus on statistical analysis, mathematical modeling, and problem-solving techniques.</p>
+            </div>
+        </section>
 
-    <footer>
-        <p>Contact me at <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-    </footer>
+        <section class="skills">
+            <h2>Skills</h2>
+            <div>
+                <h3>SQL</h3>
+                <p>Proficient in SQL for data querying, manipulation, and analysis. Experience with BigQuery.</p>
+            </div>
+            <div>
+                <h3>Machine Learning</h3>
+                <p>Experienced in using machine learning techniques, including supervised and unsupervised learning algorithms, to analyze and predict business outcomes.</p>
+            </div>
+            <div>
+                <h3>Data Visualization</h3>
+                <p>Skilled in creating data visualizations using tools like Tableau, Power BI, and Python libraries such as Matplotlib and Seaborn.</p>
+            </div>
+            <div>
+                <h3>Python</h3>
+                <p>Experienced in Python for data analysis, modeling, and automating processes.</p>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <div>
+                <h3>Healthcare Cost Optimization Model</h3>
+                <p>Developed a predictive model to optimize healthcare costs, leveraging machine learning to forecast expenses and identify cost-saving opportunities.</p>
+            </div>
+            <div>
+                <h3>Customer Segmentation Analysis</h3>
+                <p>Conducted a customer segmentation analysis for a retail company, improving targeted marketing strategies by clustering customers based on purchasing behavior.</p>
+            </div>
+        </section>
+    </div>
+</div>
+
 </body>
 </html>
