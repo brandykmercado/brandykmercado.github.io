@@ -15,31 +15,30 @@
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
-/* Header */
-header {
-    background-image: url('https://img.freepik.com/free-vector/technology-banner-background-with-hexagonal-shapes-text-space_1017-22589.jpg?t=st=1735578671~exp=1735582271~hmac=d395f44e32a9bdba54f27143a15501979ede0f973aaa7302f90c1436c1c52072&w=1380');
-    background-size: cover;
-    background-position: center center;
-    color: white;
-    height: 150px;
-    padding: 4rem 1rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-}
+        /* Header */
+        header {
+            background-image: url('https://img.freepik.com/free-vector/technology-banner-background-with-hexagonal-shapes-text-space_1017-22589.jpg?t=st=1735578671~exp=1735582271~hmac=d395f44e32a9bdba54f27143a15501979ede0f973aaa7302f90c1436c1c52072&w=1380');
+            background-size: cover;
+            background-position: center center;
+            color: white;
+            height: 150px;
+            padding: 4rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
 
-/* Header Text */
-header h1 {
-    font-size: 2rem; /* Adjust size for smaller screens */
-    line-height: 1.4;
-}
+        /* Header Text */
+        header h1 {
+            font-size: 2rem; /* Adjust size for smaller screens */
+            line-height: 1.4;
+        }
 
-header p {
-    font-size: 1rem; /* Adjust for readability */
-    margin-top: 1rem;
-}
-
+        header p {
+            font-size: 1rem; /* Adjust for readability */
+            margin-top: 1rem;
+        }
 
         /* Name Focal Point */
         .name-focal {
@@ -72,89 +71,87 @@ header p {
             color: #0078d7; /* Slightly darker blue on hover */
             border-color: #0078d7; /* Darker border on hover */
         }
-/* Navigation */
-.nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 0; /* Ensure no extra margin */
-    opacity: 0;
-    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
-    animation: fadeInText 2s 1s forwards; /* Animation for navigation items */
-}
 
-/* Navigation Bar Styles */
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Allow links to wrap if needed */
-    padding: 0.5rem; /* Reduced padding to prevent extra space */
-    background-color: #004e92; /*nav color */
-    width: 100%; /* Full width */
-    box-sizing: border-box;
-    overflow: hidden; /* Prevent overflow */
-    box-shadow: none; /* Removed box-shadow to avoid any shadowing under nav */
-    border-bottom: none; /* Ensure no border or line under the nav */
-}
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 0; /* Ensure no extra margin */
+            opacity: 0;
+            flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+            animation: fadeInText 2s 1s forwards; /* Animation for navigation items */
+        }
 
+        /* Navigation Bar Styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Allow links to wrap if needed */
+            padding: 0.5rem; /* Reduced padding to prevent extra space */
+            background-color: #004e92; /*nav color */
+            width: 100%; /* Full width */
+            box-sizing: border-box;
+            overflow: hidden; /* Prevent overflow */
+            box-shadow: none; /* Removed box-shadow to avoid any shadowing under nav */
+            border-bottom: none; /* Ensure no border or line under the nav */
+        }
 
-/* Navigation Link Styles */
-nav a {
-    color: white; 
-    text-decoration: none;
-    display: inline-block;
-    padding: 0.4rem 1rem; /* Adjust padding for smaller buttons */
-    margin: 0; /* Removed margin to avoid extra space */
-    font-size: 0.9rem; /* Slightly smaller text */
-    border: 2px solid white; 
-    border-radius: 25px;
-    box-sizing: border-box;
-    transition: background-color 0.3s, color 0.3s;
-}
+        /* Navigation Link Styles */
+        nav a {
+            color: white; 
+            text-decoration: none;
+            display: inline-block;
+            padding: 0.4rem 1rem; /* Adjust padding for smaller buttons */
+            margin: 0; /* Removed margin to avoid extra space */
+            font-size: 0.9rem; /* Slightly smaller text */
+            border: 2px solid white; 
+            border-radius: 25px;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-/* Mobile-Friendly Adjustments */
-@media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack links vertically on smaller screens */
-        padding: 1rem; /* Add padding for spacing */
-    }
+        /* Mobile-Friendly Adjustments */
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column; /* Stack links vertically on smaller screens */
+                padding: 1rem; /* Add padding for spacing */
+            }
 
-    nav a {
-        font-size: 0.9rem; /* Slightly smaller text for small screens */
-        padding: 0.5rem; /* Adjust link padding */
-    }
-}
+            nav a {
+                font-size: 0.9rem; /* Slightly smaller text for small screens */
+                padding: 0.5rem; /* Adjust link padding */
+            }
+        }
 
-
-/*Experience*/
+        /* Experience */
         .experience-cards {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-}
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
 
-.experience-card {
-    background: #f0f4fd;
-    padding: 1rem;
-    border-radius: 8px;
-    width: 250px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
+        .experience-card {
+            background: #f0f4fd;
+            padding: 1rem;
+            border-radius: 8px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
 
-.experience-card:hover {
-    transform: translateY(-5px);
-}
+        .experience-card:hover {
+            transform: translateY(-5px);
+        }
 
-.experience-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
+        .experience-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
 
         /* Content */
         .container {
@@ -297,92 +294,57 @@ nav a {
 </header>
 
 <main>
-    <!-- About Section -->
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <p>With a strong foundation in mathematics and statistics, I apply data science techniques to uncover insights and drive data-informed decision-making. When I’m not diving into data, you’ll find me exploring my creative side with 3D printing and modeling, scaling rock walls, or kicking a soccer ball around.</p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="container">
+    <section id="skills">
         <h2>Skills</h2>
         <div class="skills-list">
             <div class="skill">SQL</div>
-            <div class="skill">Python</div>
-            <div class="skill">Tableau</div>
+            <div class="skill">Machine Learning</div>
             <div class="skill">Data Visualization</div>
-            <div class="skill">Statistical Analysis</div>
-            <div class="skill">Forecasting</div>
-            <div class="skill">Innovation</div>
-            <div class="skill">Team Leadership</div>
+            <div class="skill">Python</div>
+            <div class="skill">Data Analytics</div>
+            <div class="skill">BigQuery</div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="container">
+    <section id="projects">
         <h2>Projects</h2>
         <div class="project-card">
-            <h3>Project 1: Data Science Fellowship Analysis</h3>
-            <p>Utilized Centers for Disease Control and Prevention (CDC) and Department of Labor (DOL) data sources to research the health and career impacts of women having children. My team used Python for exploratory analysis and data cleanup and Tableau to build a dashboard for visual aid. </p>
-            <a href="https://public.tableau.com/app/profile/brandy.mercado8886/viz/HealthCareerImpactsofHavingChildren/HealthCareer" target="_blank">
-                <button class="grey-button">View Tableau Dashboard</button>
-            </a>
-            <a href="https://drive.google.com/file/d/1v7YDJQY2k-EO_u2nfI2TjyBr9_TzY4rO/view?usp=sharing" target="_blank">
-                <button class="grey-button">Watch My Recorded Presentation</button>
-            </a>
+            <h3>Project 1: Data Analysis</h3>
+            <p>Description of the project goes here.</p>
+            <a href="#" class="grey-button">View Project</a>
         </div>
         <div class="project-card">
-            <h3>Project 2: Data Visualization Dashboard</h3>
-            <p>Built an interactive data visualization dashboard using Tableau to showcase key business KPIs for a retail client, enabling decision-makers to identify trends and make data-driven decisions. <a href="#">View Project</a></p>
+            <h3>Project 2: Machine Learning Model</h3>
+            <p>Description of the project goes here.</p>
+            <a href="#" class="grey-button">View Project</a>
         </div>
         <div class="project-card">
-            <h3>Project 3: Financial Forecasting Model</h3>
-            <p>Created a time series forecasting model for predicting monthly revenue and expense trends. Used Python to analyze historical data and implement seasonal adjustments. <a href="#">View Project</a></p>
-        </div>
-        <div class="project-card">
-            <h3>Project 4: This Very Website</h3>
-            <p>You're looking at it! Built this portfolio site from scratch with HTML and CSS, armed with nothing but curiosity, online tutorials, and a bit of stubborn determination. Proof that you can accomplish anything with enough Googling and a sprinkle of creativity. <a href="#">View Source Code</a></p>
+            <h3>Project 3: Data Visualization</h3>
+            <p>Description of the project goes here.</p>
+            <a href="#" class="grey-button">View Project</a>
         </div>
     </section>
-    
-<!-- Professional Experience Section -->
-<section id="experience" class="container">
-    <h2>Professional Experience</h2>
-    
-    <!-- Experience Card 1 -->
-    <div class="experience-card">
-        <h3>VP, Central Data Analytics and Affordability</h3>
-        <p>Key achievements, responsibilities, etc.</p>
-    </div>
 
-    <!-- Experience Card 2 -->
-    <div class="experience-card">
-        <h3>Previous Role Title</h3>
-        <p>Key achievements, responsibilities, etc.</p>
-    </div>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-cards">
+            <div class="experience-card">
+                <h3>VP, Central Data Analytics and Affordability</h3>
+                <p>Company Name</p>
+                <p>Details about your role and contributions go here.</p>
+            </div>
+        </div>
+    </section>
 
-    <p>From my early days in the digital marketing industry to my current leadership role in healthcare, my career has been a dynamic journey of adaptation. In my current role as VP of Central Data Analytics and Affordability, I lead a team that's driving advanced analytics and modeling to enhance operational efficiency and affordability. Curious about the full story? Check out my resume.</p>
-
-    <div style="text-align: center; margin-top: 1rem;">
-        <a href="https://drive.google.com/file/d/1n-xXQPg2hwnl-hxn6Xx4cZ9rawixZskl/view?usp=sharing" target="_blank" 
-           style="text-decoration: none; background-color: #0078d7; color: white; padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: bold; transition: background-color 0.3s ease;">
-            💼 View My Resume
-        </a>
-    </div>
-</section>
-
-
-    <!-- Education Section -->
-    <section id="education" class="container">
+    <section id="education">
         <h2>Education</h2>
-        <p><strong>The University of Texas at Austin</strong><br>Mathematics (BS Math- Actuarial Sciences) & Business Foundations, Dec 2015</p>
-        <p><strong>CorrelationOne</strong><br>Data Science Fellow (Honors Certificate), Apr 2021- Sep 2021</p>
+        <p>Details about your education background go here.</p>
     </section>
-</main>
+
 </main>
 
 <footer>
-    <p>&copy; 2024 Brandy Mercado | All rights reserved.</p>
+    <p>&copy; 2024 Brandy Mercado. All rights reserved.</p>
 </footer>
 </body>
 </html>
