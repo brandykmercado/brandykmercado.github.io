@@ -3,348 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brandy Mercado - Portfolio</title>
+    <title>Your Portfolio</title>
     <style>
-        /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f9f7f7, #f1f3f4); /* Fresh gradient background */
-            color: #333;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            background-color: #f7f7f7;
         }
 
-        /* Header */
         header {
-            background-image: url('https://img.freepik.com/free-vector/technology-banner-background-with-hexagonal-shapes-text-space_1017-22589.jpg?t=st=1735578671~exp=1735582271~hmac=d395f44e32a9bdba54f27143a15501979ede0f973aaa7302f90c1436c1c52072&w=1380');
-            background-size: cover;
-            background-position: center center;
+            background-color: #4CAF50;
             color: white;
-            height: 150px;
-            padding: 4rem 1rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            animation: fadeIn 2s forwards;
+            padding: 20px;
         }
 
-        /* Header Text */
         header h1 {
-            font-size: 2rem; /* Adjust size for smaller screens */
-            line-height: 1.4;
+            margin: 0;
         }
 
         header p {
-            font-size: 1rem; /* Adjust for readability */
-            margin-top: 1rem;
-        }
-
-        /* Name Focal Point */
-        .name-focal {
-            font-size: 3.5rem; /* Larger size for prominence */
-            margin: 0;
-            font-weight: bold;
-            animation: nameHighlight 1.5s ease-out forwards; /* Animation to highlight your name */
-        }
-
-        /* LinkedIn Link Styling */
-        .linkedin-text {
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            opacity: 0;
-            animation: fadeInText 2s 1s forwards; /* Animation to fade in LinkedIn text */
-        }
-
-        .linkedin-link {
-            text-decoration: none;
-            color: #00b4d8;
-            font-weight: bold;
-            transition: color 0.3s ease;
-            border: 2px solid #00b4d8;
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            background-color: transparent; /* Transparent background */
-        }
-
-        .linkedin-link:hover {
-            color: #0078d7; /* Slightly darker blue on hover */
-            border-color: #0078d7; /* Darker border on hover */
-        }
-
-        /* Navigation */
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 0; /* Ensure no extra margin */
-            opacity: 0;
-            flex-wrap: wrap; /* Ensure wrapping on smaller screens */
-            animation: fadeInText 2s 1s forwards; /* Animation for navigation items */
-        }
-
-        /* Navigation Bar Styles */
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap; /* Allow links to wrap if needed */
-            padding: 0.5rem; /* Reduced padding to prevent extra space */
-            background-color: #004e92; /*nav color */
-            width: 100%; /* Full width */
-            box-sizing: border-box;
-            overflow: hidden; /* Prevent overflow */
-            box-shadow: none; /* Removed box-shadow to avoid any shadowing under nav */
-            border-bottom: none; /* Ensure no border or line under the nav */
-        }
-
-        /* Navigation Link Styles */
-        nav a {
-            color: white; 
-            text-decoration: none;
-            display: inline-block;
-            padding: 0.4rem 1rem; /* Adjust padding for smaller buttons */
-            margin: 0; /* Removed margin to avoid extra space */
-            font-size: 0.9rem; /* Slightly smaller text */
-            border: 2px solid white; 
-            border-radius: 25px;
-            box-sizing: border-box;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Mobile-Friendly Adjustments */
-        @media screen and (max-width: 768px) {
-            nav {
-                flex-direction: column; /* Stack links vertically on smaller screens */
-                padding: 1rem; /* Add padding for spacing */
-            }
-
-            nav a {
-                font-size: 0.9rem; /* Slightly smaller text for small screens */
-                padding: 0.5rem; /* Adjust link padding */
-            }
-        }
-
-        /* Experience */
-        .experience-cards {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .experience-card {
-            background: #f0f4fd;
-            padding: 1rem;
-            border-radius: 8px;
-            width: 250px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .experience-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .experience-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Content */
-        .container {
-            padding: 2rem;
-            max-width: 900px;
-            margin: auto;
+            margin: 5px;
         }
 
         section {
-            margin-bottom: 2rem;
-            background: #ffffff;
-            padding: 1.5rem;
+            padding: 20px;
+        }
+
+        .content-section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
-            border-bottom: 2px solid #1f4068;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Skills */
-        .skills-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .skill {
-            background-color: #f1f1f1;
-            padding: 1rem;
-            margin: 0.5rem;
-            border-radius: 8px;
-            width: 150px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .skill:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Projects */
-        .project-card {
-            background: #f0f4fd;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-card h3 {
+        .content-section h2 {
             margin-top: 0;
         }
 
-        a {
-            color: #0078d7;
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .card ul li {
+            margin-bottom: 10px;
+        }
+
+        .card a {
+            color: #4CAF50;
             text-decoration: none;
         }
 
-        a:hover {
+        .card a:hover {
             text-decoration: underline;
         }
 
-        button {
-            background-color: #4CAF50; 
-            color: white; 
-            padding: 10px 20px; 
-            border: none; 
-            cursor: pointer; 
-            border-radius: 5px; 
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #3e8e41;
-        }
-
-        /* Grey Buttons for Project 1 */
-        .grey-button {
-            background-color: #d3d3d3; /* Light grey */
-            color: #333; /* Dark text for contrast */
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .grey-button:hover {
-            background-color: #a9a9a9; /* Darker grey on hover */
-        }
-
-        /* Footer */
         footer {
-            text-align: center;
-            padding: 1rem;
-            background: #1f4068;
+            background-color: #4CAF50;
             color: white;
-            margin-top: 2rem;
-            font-size: 0.9rem;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
 
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        /* Adjustments for layout and spacing */
+        .top-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
         }
 
-        /* Highlighting animation for your name */
-        @keyframes nameHighlight {
-            0% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 1; transform: translateY(0); }
+        .top-section img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
         }
 
-        /* Fade-in text animation for LinkedIn and nav */
-        @keyframes fadeInText {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        .top-section h2 {
+            margin-top: 15px;
         }
 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px;
+            }
+
+            .top-section img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .top-section h2 {
+                font-size: 18px;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                font-size: 12px;
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
-<header>
-    <div class="header-text">
-        <h1 class="name-focal">Brandy Mercado</h1>
-        <p class="linkedin-text">Connect with me on <a href="https://www.linkedin.com/in/brandy-mercado/" target="_blank" class="linkedin-link">LinkedIn</a></p>
-    </div>
-    <nav>
-        <div class="nav-links">
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-        </div>
-    </nav>
-</header>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Data Enthusiast | Storyteller | Problem Solver</p>
+    </header>
 
-<main>
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <div class="skill">SQL</div>
-            <div class="skill">Machine Learning</div>
-            <div class="skill">Data Visualization</div>
-            <div class="skill">Python</div>
-            <div class="skill">Data Analytics</div>
-            <div class="skill">BigQuery</div>
-        </div>
+    <section class="top-section">
+        <img src="your-photo.jpg" alt="Your photo">
+        <h2>With a strong foundation in mathematics and statistics, I apply data science techniques to uncover insights and drive data-informed decision-making. I specialize in SQL, Machine Learning, and Data Visualization.</h2>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Project 1: Data Analysis</h3>
-            <p>Description of the project goes here.</p>
-            <a href="#" class="grey-button">View Project</a>
-        </div>
-        <div class="project-card">
-            <h3>Project 2: Machine Learning Model</h3>
-            <p>Description of the project goes here.</p>
-            <a href="#" class="grey-button">View Project</a>
-        </div>
-        <div class="project-card">
-            <h3>Project 3: Data Visualization</h3>
-            <p>Description of the project goes here.</p>
-            <a href="#" class="grey-button">View Project</a>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-cards">
-            <div class="experience-card">
-                <h3>VP, Central Data Analytics and Affordability</h3>
-                <p>Company Name</p>
-                <p>Details about your role and contributions go here.</p>
+    <section>
+        <div class="content-section">
+            <h2>Experience</h2>
+            <div class="grid-container">
+                <!-- Your original experience content -->
+                <div class="card">
+                    <h3>VP, Central Data Analytics and Affordability</h3>
+                    <p>Company Name - Date Range</p>
+                    <ul>
+                        <li>Managed cross-functional teams in implementing data-driven strategies to optimize affordability and cost management.</li>
+                        <li>Developed data models to predict cost trends, contributing to a 15% reduction in operational costs.</li>
+                        <li>Collaborated with leadership to align data analytics strategies with business objectives.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Director, Data Analytics</h3>
+                    <p>Company Name - Date Range</p>
+                    <ul>
+                        <li>Led the data analytics team to improve reporting accuracy and process efficiency for better decision-making.</li>
+                        <li>Developed predictive models for forecasting customer behavior and business outcomes.</li>
+                    </ul>
+                </div>
+                <!-- Add more experience entries as necessary -->
             </div>
         </div>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <p>Details about your education background go here.</p>
+    <section>
+        <div class="content-section">
+            <h2>Education</h2>
+            <div class="grid-container">
+                <!-- Your original education content -->
+                <div class="card">
+                    <h3>Data Science Fellowship</h3>
+                    <p>Institution Name - Date Range</p>
+                    <ul>
+                        <li>Completed an intensive Data Science program focused on Machine Learning, Data Analytics, and Data Visualization.</li>
+                        <li>Developed predictive models using Python and R, applying advanced statistical techniques.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Bachelor's in Mathematics</h3>
+                    <p>Institution Name - Date Range</p>
+                    <ul>
+                        <li>Graduated with a focus on applied statistics and mathematical modeling.</li>
+                    </ul>
+                </div>
+                <!-- Add more education entries as necessary -->
+            </div>
+        </div>
     </section>
 
-</main>
-
-<footer>
-    <p>&copy; 2024 Brandy Mercado. All rights reserved.</p>
-</footer>
+    <footer>
+        <p>Contact me at <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    </footer>
 </body>
 </html>
