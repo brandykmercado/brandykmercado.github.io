@@ -3,400 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brandy Mercado - Portfolio</title>
+    <title>Portfolio - Your Name</title>
     <style>
-        /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #f9f7f7, #f1f3f4); /* Fresh gradient background */
-            color: #333;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            font-family: Arial, sans-serif;
+            color: #023338;
         }
 
-/* Header */
-header {
-    background-image: url('https://img.freepik.com/free-vector/abstract-background-gradient-modern-design_677411-3055.jpg?t=st=1735655397~exp=1735658997~hmac=53ca187291d6d97bc64d4a257a51a73008cf15f5690c9b4aca0173d9822d2e4a&w=1380');
-    background-size: cover;
-    background-position: center center;
-    color: white;
-    min-height: 200px;
-    padding: 4rem 1rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-}
-
-/* Header Text */
-header h1 {
-    font-size: 2rem; /* Adjust size for smaller screens */
-    line-height: 1.4;
-}
-
-header p {
-    font-size: 1rem; /* Adjust for readability */
-    margin-top: 1rem;
-}
-
-
-        /* Name Focal Point */
-        .name-focal {
-            font-size: 3.5rem; /* Larger size for prominence */
-            margin: 0;
-            font-weight: bold;
-            animation: nameHighlight 1.5s ease-out forwards; /* Animation to highlight your name */
-        }
-
-        /* LinkedIn Link Styling */
-        .linkedin-text {
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            opacity: 0;
-            animation: fadeInText 2s 1s forwards; /* Animation to fade in LinkedIn text */
-        }
-
-        .linkedin-link {
-            text-decoration: none;
-            color: #00b4d8;
-            font-weight: bold;
-            transition: color 0.3s ease;
-            border: 2px solid #00b4d8;
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            background-color: transparent; /* Transparent background */
-        }
-
-        .linkedin-link:hover {
-            color: #0078d7; /* Slightly darker blue on hover */
-            border-color: #0078d7; /* Darker border on hover */
-        }
-/* Navigation */
-.nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 0; /* Ensure no extra margin */
-    opacity: 0;
-    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
-    animation: fadeInText 2s 1s forwards; /* Animation for navigation items */
-}
-
-/* Navigation Bar Styles */
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Allow links to wrap if needed */
-    padding: 0.5rem; /* Reduced padding to prevent extra space */
-    background-color: #023338; /*nav color */
-    width: 100%; /* Full width */
-    box-sizing: border-box;
-    overflow: hidden; /* Prevent overflow */
-    box-shadow: none; /* Removed box-shadow to avoid any shadowing under nav */
-    border-bottom: none; /* Ensure no border or line under the nav */
-}
-
-
-/* Navigation Link Styles */
-nav a {
-    color: white; 
-    text-decoration: none;
-    display: inline-block;
-    padding: 0.4rem 1rem; /* Adjust padding for smaller buttons */
-    margin: 0; /* Removed margin to avoid extra space */
-    font-size: 0.9rem; /* Slightly smaller text */
-    border: 2px solid white; 
-    border-radius: 25px;
-    box-sizing: border-box;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Mobile-Friendly Adjustments */
-@media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack links vertically on smaller screens */
-        padding: 1rem; /* Add padding for spacing */
-    }
-
-    nav a {
-        font-size: 0.9rem; /* Slightly smaller text for small screens */
-        padding: 0.5rem; /* Adjust link padding */
-    }
-}
-
-
-/*Experience*/
-
-.experience-cards {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-}
-
-.experience-card {
-    background: #edf3f4;
-    padding: 1rem;
-    border-radius: 8px;
-    width: 250px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.experience-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-.resume-link {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 0.8rem 1.5rem;
-    background-color: #04575B;  /*Lighter version of #023338*/;
-    border-radius: 50px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    margin: 0 auto;  /* Ensures centering */
-}
-
-.resume-link:hover {
-    background-color: #0078d7;
-}
-
-        /* Content */
-        .container {
-            padding: 2rem;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        section {
-            margin-bottom: 2rem;
-            background: #ffffff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            border-bottom: 2px solid #023338; /*broder bottom color*/
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Skills */
-        .skills-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .skill {
-            background-color: #f1f1f1;
-            padding: 1rem;
-            margin: 0.5rem;
-            border-radius: 8px;
-            width: 150px;
+        header {
+            background-color: #f4f4f4;
+            padding: 2rem 0;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
         }
 
-        /* Projects */
-        .project-card {
-            background: #edf3f4;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .project-card h3 {
-            margin-top: 0;
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
         }
 
-        a {
-            color: #0078d7;
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        nav a {
             text-decoration: none;
+            color: #023338;
+            font-weight: bold;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .section {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .projects {
+            background-color: #f4f4f4;
+        }
+
+        .projects h2, .about h2, .contact h2 {
+            margin-bottom: 2rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #023338;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
         }
 
         button {
-            background-color: #4CAF50; 
-            color: white; 
-            padding: 10px 20px; 
-            border: none; 
-            cursor: pointer; 
-            border-radius: 5px; 
-            transition: background-color 0.3s ease;
+            background-color: #023338;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
         }
 
         button:hover {
-            background-color: #0078d7;
-        }
-
-        /* Grey Buttons for Project 1 */
-        .grey-button {
-            background-color: #d3d3d3; /* Light grey */
-            color: #333; /* Dark text for contrast */
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .grey-button:hover {
-            background-color: #a9a9a9; /* Darker grey on hover */
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #023338; /*footer color*/
-            color: white;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-        }
-
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        /* Highlighting animation for your name */
-        @keyframes nameHighlight {
-            0% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Fade-in text animation for LinkedIn and nav */
-        @keyframes fadeInText {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            background-color: #4CAF50;
         }
 
     </style>
 </head>
 <body>
-<header>
-    <div class="header-text">
-        <h1 class="name-focal">Brandy Mercado</h1>
-        <p class="linkedin-text">Connect with me on <a href="https://www.linkedin.com/in/brandy-mercado/" target="_blank" class="linkedin-link">LinkedIn</a></p>
-    </div>
-    <nav>
-        <div class="nav-links">
-            <a href="#skills">Skills</a>
+    <header>
+        <h1>Your Name</h1>
+        <p>Data Scientist | Storyteller | Problem Solver</p>
+        <nav>
+            <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-        </div>
-    </nav>
-</header>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<main>
-    <!-- About Section -->
-    <section id="about" class="container">
+    <section id="about" class="section about">
         <h2>About Me</h2>
-        <p>With a strong foundation in mathematics and statistics, I apply data science techniques to uncover insights and drive data-informed decision-making. When I’m not diving into data, you’ll find me exploring my creative side with 3D printing and modeling, scaling rock walls, or kicking a soccer ball around.</p>
+        <p>With a strong foundation in mathematics and statistics, I apply data science techniques to uncover insights and drive data-informed decision-making. I specialize in SQL, Machine Learning, and Data Visualization.</p>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="container">
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <div class="skill">SQL</div>
-            <div class="skill">Python</div>
-            <div class="skill">Tableau</div>
-            <div class="skill">Data Visualization</div>
-            <div class="skill">Statistical Analysis</div>
-            <div class="skill">Forecasting</div>
-            <div class="skill">Innovation</div>
-            <div class="skill">Team Leadership</div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="container">
+    <section id="projects" class="section projects">
         <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Project 1: Data Science Fellowship Analysis</h3>
-            <p>Utilized Centers for Disease Control and Prevention (CDC) and Department of Labor (DOL) data sources to research the health and career impacts of women having children. My team used Python for exploratory analysis and data cleanup and Tableau to build a dashboard for visual aid. </p>
-            <a href="https://public.tableau.com/app/profile/brandy.mercado8886/viz/HealthCareerImpactsofHavingChildren/HealthCareer" target="_blank">
-                <button class="grey-button">View Tableau Dashboard</button>
-            </a>
-            <a href="https://drive.google.com/file/d/1v7YDJQY2k-EO_u2nfI2TjyBr9_TzY4rO/view?usp=sharing" target="_blank">
-                <button class="grey-button">Watch My Recorded Presentation</button>
-            </a>          
-        </div>
-        <div class="project-card">
-            <h3>Project 2: Data Visualization Dashboard</h3>
-            <p>Built an interactive data visualization dashboard using Tableau to showcase key business KPIs for a retail client, enabling decision-makers to identify trends and make data-driven decisions. <a href="#">View Project</a></p>
-        </div>
-        <div class="project-card">
-            <h3>Project 3: Financial Forecasting Model</h3>
-            <p>Created a time series forecasting model for predicting monthly revenue and expense trends. Used Python to analyze historical data and implement seasonal adjustments. <a href="#">View Project</a></p>
-        </div>
-        <div class="project-card">
-            <h3>Project 4: This Very Website</h3>
-            <p>You're looking at it! Built this portfolio site from scratch with HTML and CSS, armed with nothing but curiosity, online tutorials, and a bit of stubborn determination. Proof that you can accomplish anything with enough Googling and a sprinkle of creativity. <a href="#">View Source Code</a></p>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>A brief description of your project. What does it solve or showcase?</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>A brief description of your project. What does it solve or showcase?</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 3</h3>
+                <p>A brief description of your project. What does it solve or showcase?</p>
+            </div>
         </div>
     </section>
 
-
-<!-- Professional Experience Section -->
-<section id="experience" class="container">
-    <h2>Professional Experience</h2>
-    
-    <!-- Add this container to hold the experience cards side by side -->
-    <div class="experience-container" style="display: flex; justify-content: space-between; gap: 20px;">
-        
-        <!-- Experience Card 1 -->
-        <div class="experience-card" style="flex: 1; padding: 20px; border-radius: 8px; background-color: #edf3f4;">
-            <h3>VP, Central Data Analytics and Affordability</h3>
-            <p>Key achievements, responsibilities, etc.</p>
-        </div>
-
-        <!-- Experience Card 2 -->
-        <div class="experience-card" style="flex: 1; padding: 20px; border-radius: 8px; background-color: #edf3f4;">
-            <h3>Previous Role Title</h3>
-            <p>Key achievements, responsibilities, etc.</p>
-        </div>
-    </div>
-
-    <p>From my early days in the digital marketing industry to my current leadership role in healthcare, my career has been a dynamic journey. In my current role as VP of Central Data Analytics and Affordability, I lead a team that's driving advanced analytics and modeling to enhance operational efficiency and affordability. Curious about the full story? Check out my resume.</p>
-
-<div class="experience-container" style="text-align: center;">
-    <a href="https://drive.google.com/file/d/1n-xXQPg2hwnl-hxn6Xx4cZ9rawixZskl/view?usp=sharing" target="_blank" class="resume-link">
-        📋 View My Resume
-    </a>
-</div>
-
-
-</section>
-
-
-
-    <!-- Education Section -->
-    <section id="education" class="container">
-        <h2>Education</h2>
-        <p><strong>The University of Texas at Austin</strong><br>Mathematics (BS Math- Actuarial Sciences) & Business Foundations, Dec 2015</p>
-        <p><strong>CorrelationOne</strong><br>Data Science Fellow (Honors Certificate), Apr 2021- Sep 2021</p>
+    <section id="contact" class="section contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out for collaborations or inquiries!</p>
+        <button>Contact Me</button>
     </section>
-</main>
-</main>
 
-<footer>
-    <p>&copy; 2024 Brandy Mercado | All rights reserved.</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Your Name. Built with love and passion for data.</p>
+        <a href="#">Back to top</a>
+    </footer>
 </body>
 </html>
