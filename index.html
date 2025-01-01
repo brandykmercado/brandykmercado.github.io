@@ -128,7 +128,15 @@ nav a {
 
 
 /*Experience*/
-        .experience-cards {
+.experience-container {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height to center it vertically */
+    text-align: center; /* Fallback for older browsers */
+}
+
+.experience-cards {
     display: flex;
     gap: 2rem;
     justify-content: center;
@@ -149,16 +157,6 @@ nav a {
 .experience-card h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-}
-.resume-link {
-    text-decoration: none;
-    background-color: #026973; /* Default button color */
-    color: white; /* Default text color */
-    padding: 0.8rem 1.5rem;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-    background-position: center center;
 }
 
 .resume-link:hover {
