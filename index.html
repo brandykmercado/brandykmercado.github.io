@@ -150,6 +150,21 @@ nav a {
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
+.resume-link {
+    text-decoration: none;
+    background-color: #026973; /* Default button color */
+    color: white; /* Default text color */
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.resume-link:hover {
+    background-color: #024e51; /* Background color on hover */
+    color: #f6f8fa; /* Text color on hover */
+}
+
 
 
         /* Content */
@@ -359,12 +374,13 @@ nav a {
 
     <p>From my early days in the digital marketing industry to my current leadership role in healthcare, my career has been a dynamic journey of adaptation. In my current role as VP of Central Data Analytics and Affordability, I lead a team that's driving advanced analytics and modeling to enhance operational efficiency and affordability. Curious about the full story? Check out my resume.</p>
 
-    <div style="text-align: center; margin-top: 1rem;">
-        <a href="https://drive.google.com/file/d/1n-xXQPg2hwnl-hxn6Xx4cZ9rawixZskl/view?usp=sharing" target="_blank" 
-           style="text-decoration: none; background-color: #0078d7; color: white; padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: bold; transition: background-color 0.3s ease;">
-            💼 View My Resume
-        </a>
-    </div>
+<div class="experience-container">
+    <a href="https://drive.google.com/file/d/1n-xXQPg2hwnl-hxn6Xx4cZ9rawixZskl/view?usp=sharing" 
+       class="resume-link" target="_blank">
+        💼 View My Resume
+    </a>
+</div>
+
 </section>
 
 
