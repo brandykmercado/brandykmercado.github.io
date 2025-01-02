@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
@@ -30,6 +31,7 @@
             text-decoration: underline;
         }
 
+        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -63,7 +65,21 @@
         header nav a:hover {
             color: #e6f1ff;
         }
+        
+       /*General Additions*/
+        textarea {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #8892b0;
+            background-color: #112240; /* Ensure the background color matches design */
+            border: 1px solid #233554; /* Border for consistency */
+            border-radius: 5px;
+            padding: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
 
+        /* Hero Section */
         .hero {
             display: flex;
             flex-direction: column;
@@ -118,6 +134,7 @@
             color: #0a192f;
         }
 
+        /* About Section */
         section {
             padding: 6rem 2rem;
         }
@@ -139,94 +156,121 @@
             color: #8892b0;
         }
 
-        .projects {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+/* Projects Section */
+.projects {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
-        .projects h2 {
-            font-size: 2rem;
-            color: #e6f1ff;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
+.projects h2 {
+    font-size: 2rem;
+    color: #e6f1ff;
+    margin-bottom: 2rem;
+    text-align: center;
+}
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
 
-        .project-card {
-            background-color: #112240;
-            border: 1px solid #233554;
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
+.project-card {
+    background-color: #112240;
+    border: 1px solid #233554;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #64ffda;
-        }
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #64ffda;
+}
 
-        .project-card h3 {
-            font-size: 1.5rem;
-            color: #e6f1ff;
-            margin-bottom: 1.5rem;
-        }
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #e6f1ff;
+    margin-bottom: 1.5rem; /* Adjust this value to increase/decrease spacing */
+}
 
-        .project-card p {
-            font-size: 1rem;
-            color: #8892b0;
-        }
+.project-card p {
+    font-size: 1rem;
+    color: #8892b0;
+}
 
-        .project-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
 
-        .project-card:hover img {
-            transform: scale(1.05);
-        }
+/* Image Hover Effect */
+.project-card:hover img {
+    transform: scale(1.05);
+}
 
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding-top: 60px;
-        }
+.project-card .image-container {
+    display: none;
+}
 
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 80%;
-        }
+.project-card .show-image {
+    display: block;
+    cursor: pointer;
+}
 
-        .close {
-            color: #fff;
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+    }
+}
+        
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 60px;
+}
 
-        .close:hover,
-        .close:focus {
-            color: #f1f1f1;
-        }
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+}
 
+.close {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    color: #ccc;
+    text-align: center;
+    padding: 10px;
+}
+        /* Footer */
         footer {
             background-color: #0a192f;
             color: #8892b0;
@@ -243,6 +287,8 @@
             color: #64ffda;
         }
 
+
+        /* Contact Section */
         .contact {
             background-color: #112240;
             color: #ccd6f6;
@@ -276,8 +322,7 @@
             text-align: left;
         }
 
-        .contact input,
-        .contact textarea {
+        .contact input, .contact textarea {
             padding: 0.8rem;
             font-size: 1rem;
             border-radius: 5px;
@@ -301,6 +346,7 @@
             background-color: #50e5c1;
         }
 
+        /* Smooth Scrolling */
         html {
             scroll-behavior: smooth;
         }
@@ -330,51 +376,110 @@
     <section id="about" class="about">
         <h2>About Me</h2>
         <p>
-            With a foundation in mathematics, digital marketing, and healthcare economics, I use data science to uncover insights that inform key decisions. Proficient in SQL, Python, and Tableau, I’m always seeking new opportunities to learn and innovate in this ever-evolving field. When I’m not diving into data, you’ll find me exploring my creative side and refining my process optimization skills.
+            With a foundation in mathematics, digital marketing, and healthcare economics, I use data science to uncover insights that inform key decisions. Proficient in SQL, Python, and Tableau, I’m always seeking new opportunities to learn and innovate in this ever-evolving field. When I’m not diving into data, you’ll find me exploring my creative side with 3D modeling & printing, scaling rock walls, or kicking a soccer ball around.
         </p>
     </section>
 
-    <section id="projects" class="projects">
-        <h2>Selected Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Project 1: Data Analytics for Healthcare</h3>
-                <p>A deep dive into healthcare economics, focusing on analyzing cost structures and optimizing resource allocation for better affordability.</p>
-                <a href="https://github.com/brandymercado/project1" target="_blank">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Project 2: Predictive Analytics in Marketing</h3>
-                <p>This project showcases how predictive analytics models were used to boost customer engagement and optimize digital marketing campaigns.</p>
-                <a href="https://github.com/brandymercado/project2" target="_blank">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Project 3: Process Automation with Data Science</h3>
-                <p>Exploring how automation techniques in data processing and analysis can streamline business operations and improve efficiency.</p>
-                <a href="https://github.com/brandymercado/project3" target="_blank">View Project</a>
-            </div>
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Data Science Fellowship Analysis</h3>
+            <p>Utilized Centers for Disease Control and Prevention (CDC) and Department of Labor (DOL) data sources to research the health and career impacts of women having children. Leveraged Python for exploratory analysis and data cleanup and Tableau to build a dashboard for visual aid.</p>
+            <p><a href="https://drive.google.com/file/d/1v7YDJQY2k-EO_u2nfI2TjyBr9_TzY4rO/view?usp=sharing" target="_blank">Watch My Recorded Presentation</a></p>
+            <p><a href="https://public.tableau.com/app/profile/brandy.mercado8886/viz/HealthCareerImpactsofHavingChildren/HealthCareer" target="_blank">View Tableau Dashboard</a></p>
         </div>
-    </section>
+        <div class="project-card">
+            <h3>Interactive Dashboards for Decision Support</h3>
+            <p>Designed Tableau dashboards that visualized key metrics, enabling stakeholders to make informed decisions.</p>
+        </div>
+        <div class="project-card">
+            <h3>Automating Data Processes</h3>
+            <p>Streamlined data reporting by automating SQL pipelines, reducing refresh time by 90%.</p>
+        </div>
+        <div class="project-card">
+            <h3>This Very Website</h3>
+            <p>You're looking at it! Built this portfolio site from scratch with HTML and CSS, armed with nothing but curiosity, online tutorials, and a bit of stubborn determination. Proof that you can accomplish anything with enough Googling and a sprinkle of creativity.</p>
+            <p><a href="https://github.com/brandykmercado/brandykmercado.github.io/blob/main/index.html" target="_blank">View Source Code</a></p>
+        </div>
+        <!-- Example of clickable image for mobile-friendly view -->
+<div class="project-card">
+    <h3>Test</h3>
+    <p>Test text</p>
+    <!-- Click to trigger the modal -->
+    <a href="javascript:void(0);" class="open-modal">
+        <img src="https://drive.google.com/thumbnail?id=1JsraumFlem4tIgv6amd5zGO4c-fAB5Qt" alt="KPI Tracking Example">
+    </a>
+</div>
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>If you’d like to connect or learn more about my work, feel free to reach out!</p>
-        <form action="your-form-processing-url" method="post">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+<!-- Modal functionality (script) -->
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+    // Get the image and insert it inside the modal
+    var img = document.querySelector(".open-modal img");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
 
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+    // When the user clicks on the image, open the modal
+    img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+
+    </div>
+</section>
+
+
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>If you would like to get in touch or collaborate on a project, feel free to reach out using the form below.</p>
+    <form action="https://formspree.io/f/xpwwowzw" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+</section>
 
     <footer>
-        <p>&copy; 2025 Brandy Mercado | <a href="https://www.linkedin.com/in/brandymercado/">LinkedIn</a> | <a href="https://github.com/brandymercado">GitHub</a></p>
+        <p>&copy; 2025 Brandy Mercado | All Rights Reserved</p>
     </footer>
 </body>
+<script>
+    // JavaScript for modal (if any is needed)
+    const showImage = document.querySelectorAll('.show-image');
+    const imageContainer = document.querySelectorAll('.image-container');
 
+    showImage.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            imageContainer[index].style.display = 'block';
+        });
+    });
+</script>
 </html>
