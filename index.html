@@ -219,6 +219,28 @@
     display: block;
     cursor: pointer;
 }
+    .image-container {
+        position: relative;
+        display: inline-block;
+    }
+    .image-container img {
+        transition: transform 0.3s ease;
+    }
+    .image-container:hover img {
+        transform: scale(1.05);
+    }
+    .image-container .hover-text {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 16px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
@@ -407,9 +429,10 @@
     <h3>Test</h3>
     <p>Test text</p>
     <!-- Click to trigger the modal -->
-    <a href="javascript:void(0);" class="open-modal">
-        <img src="https://raw.githubusercontent.com/brandykmercado/brandykmercado.github.io/main/Sample%201_Blur.png" alt="Sample Image">
-    </a>
+<a href="https://raw.githubusercontent.com/brandykmercado/brandykmercado.github.io/refs/heads/main/Sample%201_Blur.png" target="_blank" class="image-container">
+    <img src="https://raw.githubusercontent.com/brandykmercado/brandykmercado.github.io/refs/heads/main/Sample%201_Blur.png" alt="KPI Tracking Example"/>
+    <div class="hover-text">Click to expand</div>
+</a>
 </div>
 
 <!-- The Modal -->
