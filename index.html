@@ -156,48 +156,77 @@
             color: #8892b0;
         }
 
-        /* Projects Section */
-        .projects {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+/* Projects Section */
+.projects {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
-        .projects h2 {
-            font-size: 2rem;
-            color: #e6f1ff;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
+.projects h2 {
+    font-size: 2rem;
+    color: #e6f1ff;
+    margin-bottom: 2rem;
+    text-align: center;
+}
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
 
-        .project-card {
-            background-color: #112240;
-            border: 1px solid #233554;
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
+.project-card {
+    background-color: #112240;
+    border: 1px solid #233554;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #64ffda;
-        }
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #64ffda;
+}
 
-        .project-card h3 {
-            font-size: 1.5rem;
-            color: #e6f1ff;
-            margin-bottom: 1.5rem; /* Adjust this value to increase/decrease spacing */
-        }
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #e6f1ff;
+    margin-bottom: 1.5rem; /* Adjust this value to increase/decrease spacing */
+}
 
-        .project-card p {
-            font-size: 1rem;
-            color: #8892b0;
-        }
+.project-card p {
+    font-size: 1rem;
+    color: #8892b0;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Image Hover Effect */
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-card .image-container {
+    display: none;
+}
+
+.project-card .show-image {
+    display: block;
+    cursor: pointer;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+    }
+}
+
 
         /* Footer */
         footer {
@@ -215,6 +244,7 @@
         footer a {
             color: #64ffda;
         }
+
 
         /* Contact Section */
         .contact {
@@ -308,30 +338,39 @@
         </p>
     </section>
 
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Data Science Fellowship Analysis</h3>
-                <p>Utilized Centers for Disease Control and Prevention (CDC) and Department of Labor (DOL) data sources to research the health and career impacts of women having children. Leveraged Python for exploratory analysis and data cleanup and Tableau to build a dashboard for visual aid.</p>
-                <p><a href="https://drive.google.com/file/d/1v7YDJQY2k-EO_u2nfI2TjyBr9_TzY4rO/view?usp=sharing" target="_blank">Watch My Recorded Presentation</a></p>
-                <p><a href="https://public.tableau.com/app/profile/brandy.mercado8886/viz/HealthCareerImpactsofHavingChildren/HealthCareer" target="_blank">View Tableau Dashboard</a></p>
-            </div>
-            <div class="project-card">
-                <h3>Interactive Dashboards for Decision Support</h3>
-                <p>Designed Tableau dashboards that visualized key metrics, enabling stakeholders to make informed decisions.</p>
-            </div>
-            <div class="project-card">
-                <h3>Automating Data Processes</h3>
-                <p>Streamlined data reporting by automating SQL pipelines, reducing refresh time by 90%.</p>
-            </div>
-            <div class="project-card">
-                <h3>This Very Website</h3>
-                <p>You're looking at it! Built this portfolio site from scratch with HTML and CSS, armed with nothing but curiosity, online tutorials, and a bit of stubborn determination. Proof that you can accomplish anything with enough Googling and a sprinkle of creativity.</p>
-                <a href="https://github.com/brandykmercado/brandykmercado.github.io/blob/main/index.html" target="_blank">View Source Code</a>
-            </div>
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Data Science Fellowship Analysis</h3>
+            <p>Utilized Centers for Disease Control and Prevention (CDC) and Department of Labor (DOL) data sources to research the health and career impacts of women having children. Leveraged Python for exploratory analysis and data cleanup and Tableau to build a dashboard for visual aid.</p>
+            <p><a href="https://drive.google.com/file/d/1v7YDJQY2k-EO_u2nfI2TjyBr9_TzY4rO/view?usp=sharing" target="_blank">Watch My Recorded Presentation</a></p>
+            <p><a href="https://public.tableau.com/app/profile/brandy.mercado8886/viz/HealthCareerImpactsofHavingChildren/HealthCareer" target="_blank">View Tableau Dashboard</a></p>
         </div>
-    </section>
+        <div class="project-card">
+            <h3>Interactive Dashboards for Decision Support</h3>
+            <p>Designed Tableau dashboards that visualized key metrics, enabling stakeholders to make informed decisions.</p>
+        </div>
+        <div class="project-card">
+            <h3>Automating Data Processes</h3>
+            <p>Streamlined data reporting by automating SQL pipelines, reducing refresh time by 90%.</p>
+        </div>
+        <div class="project-card">
+            <h3>This Very Website</h3>
+            <p>You're looking at it! Built this portfolio site from scratch with HTML and CSS, armed with nothing but curiosity, online tutorials, and a bit of stubborn determination. Proof that you can accomplish anything with enough Googling and a sprinkle of creativity.</p>
+            <p><a href="https://github.com/brandykmercado/brandykmercado.github.io/blob/main/index.html" target="_blank">View Source Code</a></p>
+        </div>
+        <!-- Example of clickable image for mobile-friendly view -->
+        <div class="project-card">
+            <h3>Project Image Example</h3>
+            <p>Click the image below to see it in full size.</p>
+            <a href="path-to-your-image.jpg" target="_blank">
+                <img src="path-to-thumbnail-image.jpg" alt="Project Thumbnail" style="width:100%; height:auto; border-radius:8px;">
+            </a>
+        </div>
+    </div>
+</section>
+
 
 <section id="contact" class="contact">
     <h2>Contact Me</h2>
