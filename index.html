@@ -195,6 +195,7 @@
     font-size: 1.5rem;
     color: #e6f1ff;
     margin-bottom: 0.5rem; /* Adjust this value to increase/decrease spacing */
+    display: block /* Reset to block display for the anchor tag */
 }
 
 .project-card p {
@@ -203,9 +204,11 @@
 }
 
 .project-card img {
+    display: inline-block; /* Makes images appear inline */
     max-width: 100%; /* Ensure images don’t exceed container width */
     width: 45%; /* Adjust this width as needed */
     height: auto;
+    margin-right: 10px; /* Space between the images */
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
