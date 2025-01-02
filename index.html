@@ -408,16 +408,44 @@
     <p>Test text</p>
     <!-- Click to trigger the modal -->
     <a href="javascript:void(0);" class="open-modal">
-        <img src="https://drive.google.com/uc?id=1JsraumFlem4tIgv6amd5zGO4c-fAB5Qt" alt="KPI Tracking Example">
+        <img src="https://drive.google.com/uc?id=1JsraumFlem4tIgv6amd5zGO4c-fAB5Qt" alt="KPI Tracking Exampl">
+
     </a>
 </div>
 
-<!-- Modal Container -->
-<div id="modal" class="modal">
+<!-- The Modal -->
+<div id="myModal" class="modal">
     <span class="close">&times;</span>
-    <img class="modal-content" id="modalImage">
+    <img class="modal-content" id="img01">
     <div id="caption"></div>
 </div>
+
+<!-- Modal functionality (script) -->
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal
+    var img = document.querySelector(".open-modal img");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    // When the user clicks on the image, open the modal
+    img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
 
     </div>
 </section>
