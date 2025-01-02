@@ -502,33 +502,43 @@
   </div>
 </div>
 
-<!-- Modal -->
-<div id="modal" class="modal">
-  <span class="close" id="close-modal">&times;</span>
-  <img class="modal-content" id="modal-image">
-  <div id="caption"></div>
+<!-- Modal content -->
+<div class="modal-content">
+    <img src="" id="modal-image" alt="Expanded image">
+    <span class="close" id="close-modal">&times;</span>
+</div>
 </div>
 
-
-<!-- Modal functionality (script) -->
 <script>
-// Get modal elements
-var modal = document.getElementById('modal');
-var modalImage = document.getElementById('modal-image');
-var caption = document.getElementById('caption');
+    // Get the modal
+    var modal = document.getElementById('modal');
 
-// Open modal when image is clicked
-document.getElementById('open-modal').onclick = function() {
-  modal.style.display = 'block';
-  modalImage.src = this.src;  // Set the image in the modal
-  caption.innerHTML = this.alt; // Set the caption text (alt text of the image)
-};
+    // Get the image and insert it inside the modal
+    var img = document.getElementById('open-modal');
+    var modalImg = document.getElementById("modal-image");
 
-// Close modal when the close button is clicked
-document.getElementById('close-modal').onclick = function() {
-  modal.style.display = 'none';
-};
+    // When the user clicks the image, open the modal
+    img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
+
+    // Get the <span> element to close the modal
+    var closeBtn = document.getElementById("close-modal");
+
+    // When the user clicks on <span> (x), close the modal
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close the modal if clicked outside the modal content
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 </script>
+
 
 
 
