@@ -395,11 +395,12 @@
 }
         
 /* Back to Top Button */
+/* Default style for larger screens (Button fixed in position) */
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: rgba(100, 255, 218, 0.5); /* Transparent Mint Green */
+    background-color: #A1FFDD; /* Lighter Mint Green */
     color: #0a192f;
     padding: 1rem 2rem;
     font-size: 1rem;
@@ -420,20 +421,37 @@
     transform: scale(1.1);
 }
 
-/* Responsive adjustments */
+/* For mobile screens: Move button to footer */
 @media (max-width: 768px) {
+    /* Hide the fixed button on mobile */
     .back-to-top {
-        padding: 0.5rem 1rem; /* Smaller padding on mobile */
-        font-size: 0.9rem; /* Smaller font size on mobile */
-        bottom: 10px; /* Adjust bottom margin for better placement */
-        right: 10px; /* Adjust right margin */
+        display: none;
+    }
+
+    /* Show the button within the footer */
+    footer .back-to-top {
+        position: relative;
+        margin-top: 20px;  /* Space above the footer */
+        display: block;    /* Make button visible */
+        background-color: #A1FFDD;  /* Lighter Mint Green */
+        color: #0a192f;
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    footer .back-to-top:hover {
+        background-color: #50e5c1;
+        transform: scale(1.1);
     }
 }
 
+/* For very small screens, you can hide it entirely if desired */
 @media (max-width: 480px) {
-    /* Optionally, hide the button on very small screens */
-    .back-to-top {
-        display: none;
+    footer .back-to-top {
+        display: none; /* Hide the button entirely for very small screens */
     }
 }
 
@@ -564,7 +582,7 @@ span.onclick = function() {
 <footer>
     <p>&copy; 2025 Brandy Mercado | All Rights Reserved</p>
     <!-- Back to Top Button -->
-    <a href="javascript:void(0)" class="back-to-top">Back to Top</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
 </footer>
 
 <script>
