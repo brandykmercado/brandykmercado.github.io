@@ -423,6 +423,12 @@
     transform: scale(1.1);
 }
 
+/* Remove hover effect after click (active state) */
+.back-to-top:active {
+    background-color: #A1FFDD; /* Return to the original color */
+    transform: none;  /* Reset scale */
+}
+
 /* For mobile screens: Style button to show an arrow and text */
 @media (max-width: 768px) {
     /* Hide the fixed button on mobile */
