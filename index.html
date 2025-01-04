@@ -402,8 +402,8 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #A1FFDD; /* Lighter Mint Green */
-    color: #0a192f;
+    background-color: #5A8F9B; /* Soft Blue (subtle color for the button) */
+    color: #ffffff; /* White text */
     padding: 1rem 2rem;
     font-size: 1rem;
     border-radius: 5px;
@@ -419,54 +419,36 @@
 
 /* Hover effect */
 .back-to-top:hover {
-    background-color: #50e5c1;
+    background-color: #3F6B72; /* Darker shade for hover */
     transform: scale(1.1);
 }
 
 /* Remove hover effect after click (active state) */
 .back-to-top:active {
-    background-color: #A1FFDD; /* Return to the original color */
+    background-color: #5A8F9B; /* Return to the original color */
     transform: none;  /* Reset scale */
 }
 
-/* For mobile screens: Style button to show an arrow and text */
+/* Reset button color once focus or click ends (when scrolling again) */
+.back-to-top:focus, .back-to-top:active {
+    background-color: #5A8F9B; /* Reset to Soft Blue */
+    color: #ffffff; /* Keep text white */
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    /* Hide the fixed button on mobile */
     .back-to-top {
-        display: none;
-    }
-
-    /* Show the button within the footer */
-    footer .back-to-top {
-        position: relative;
-        margin-top: 20px;  /* Space above the footer */
-        display: block;    /* Make button visible */
-        background-color: transparent; /* No background */
-        color: #64ffda;  /* Mint Green text */
-        font-size: 1rem;
-        padding: 0.5rem 1rem; /* Smaller padding */
-        border-radius: 5px;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;  /* Space between the icon and text */
-        transition: color 0.3s ease;
-    }
-
-    footer .back-to-top:hover {
-        color: #50e5c1;  /* Lighter Mint Green on hover */
-    }
-
-    footer .back-to-top i {
-        font-size: 1.5rem; /* Bigger icon */
+        padding: 0.5rem 1rem; /* Smaller padding on mobile */
+        font-size: 0.9rem; /* Smaller font size on mobile */
+        bottom: 10px; /* Adjust bottom margin for better placement */
+        right: 10px; /* Adjust right margin */
     }
 }
 
-/* For very small screens, you can hide it entirely if desired */
 @media (max-width: 480px) {
-    footer .back-to-top {
-        display: none; /* Hide the button entirely for very small screens */
+    /* Optionally, hide the button on very small screens */
+    .back-to-top {
+        display: none;
     }
 }
 
@@ -604,25 +586,27 @@ span.onclick = function() {
 
 
 <script>
-// Wait for the DOM to load before attaching events
-document.addEventListener("DOMContentLoaded", function () {
-    const backToTopButton = document.querySelector('.back-to-top');
+// Get the button
+const backToTopButton = document.querySelector('.back-to-top');
 
-    // When the user scrolls down 200px, show the button
-    window.onscroll = function () {
-        if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
-            backToTopButton.classList.add('show');
-        } else {
-            backToTopButton.classList.remove('show');
-        }
-    };
+// When the user scrolls down 200px, show the button
+window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
 
-    // Scroll to top when the button is clicked
-    backToTopButton.addEventListener('click', function (event) {
-        event.preventDefault(); // Prevent default anchor behavior
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    // Reset the button's active state when scrolling resumes
+    backToTopButton.classList.remove('active');
+};
+
+// Scroll to top when the button is clicked
+backToTopButton.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
 </script>
 
 </body>
