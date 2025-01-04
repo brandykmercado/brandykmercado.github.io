@@ -568,17 +568,25 @@ span.onclick = function() {
 </footer>
 
 <script>
-// Get the button
-const backToTopButton = document.querySelector('.back-to-top');
+// Wait for the DOM to load before attaching events
+document.addEventListener("DOMContentLoaded", function () {
+    const backToTopButton = document.querySelector('.back-to-top');
 
-// When the user scrolls down 200px, show the button
-window.onscroll = function () {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        backToTopButton.classList.add('show');
-    } else {
-        backToTopButton.classList.remove('show');
-    }
-};
+    // When the user scrolls down 200px, show the button
+    window.onscroll = function () {
+        if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    };
+
+    // Scroll to top when the button is clicked
+    backToTopButton.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
 </script>
 
 </body>
