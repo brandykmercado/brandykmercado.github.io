@@ -397,13 +397,13 @@
 }
         
 /* Back to Top Button */
-/* Default style for larger screens (Button fixed in position) */
+/* Large screen version (shows floating button) */
 .back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #5A8F9B; /* Soft Blue (subtle color for the button) */
-    color: #ffffff; /* White text */
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    background-color: #64ffda; /* Mint Green */
+    color: #0a192f;
     padding: 1rem 2rem;
     font-size: 1rem;
     border-radius: 5px;
@@ -419,36 +419,37 @@
 
 /* Hover effect */
 .back-to-top:hover {
-    background-color: #3F6B72; /* Darker shade for hover */
+    background-color: #50e5c1;
     transform: scale(1.1);
 }
 
-/* Remove hover effect after click (active state) */
-.back-to-top:active {
-    background-color: #5A8F9B; /* Return to the original color */
-    transform: none;  /* Reset scale */
-}
-
-/* Reset button color once focus or click ends (when scrolling again) */
-.back-to-top:focus, .back-to-top:active {
-    background-color: #5A8F9B; /* Reset to Soft Blue */
-    color: #ffffff; /* Keep text white */
-}
-
-/* Responsive adjustments */
+/* Mobile view adjustments */
 @media (max-width: 768px) {
     .back-to-top {
-        padding: 0.5rem 1rem; /* Smaller padding on mobile */
-        font-size: 0.9rem; /* Smaller font size on mobile */
-        bottom: 10px; /* Adjust bottom margin for better placement */
-        right: 10px; /* Adjust right margin */
+        display: none; /* Hide the floating button */
     }
-}
 
-@media (max-width: 480px) {
-    /* Optionally, hide the button on very small screens */
-    .back-to-top {
-        display: none;
+    /* Footer version for mobile */
+    .footer-back-to-top {
+        display: inline-block; /* Show the button in the footer */
+        background: none; /* No background */
+        color: #64ffda; /* Mint green text */
+        font-size: 1.2rem;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .footer-back-to-top:hover {
+        color: #50e5c1; /* Slightly lighter mint on hover */
+    }
+
+    /* Optionally add an icon for mobile */
+    .footer-back-to-top::before {
+        content: '\2191'; /* Unicode for upward arrow */
+        font-size: 1.5rem; /* Adjust size of the arrow */
+        margin-right: 0.5rem; /* Space between the arrow and text */
     }
 }
 
@@ -578,11 +579,10 @@ span.onclick = function() {
 
 <footer>
     <p>&copy; 2025 Brandy Mercado | All Rights Reserved</p>
-    <!-- Back to Top Button -->
-    <a href="#top" class="back-to-top">
-        <i class="fas fa-arrow-up"></i> Back to Top
-    </a>
+    <!-- Mobile-specific Back to Top Button in Footer -->
+    <a href="#top" class="footer-back-to-top">Back to Top</a>
 </footer>
+
 
 
 <script>
