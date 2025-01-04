@@ -397,7 +397,7 @@
 }
         
 /* Back to Top Button */
-/* Large screen version (shows floating button) */
+/* Back to Top Button - Large Screens */
 .back-to-top {
     position: fixed;
     bottom: 20px; /* Adjust the distance from the bottom */
@@ -423,33 +423,35 @@
     transform: scale(1.1);
 }
 
-/* Mobile view adjustments */
+/* Footer Back to Top Button - Mobile Only */
+.footer-back-to-top {
+    display: none; /* Hidden by default */
+    background-color: #64ffda; /* Mint Green */
+    color: #0a192f;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Show Footer Back to Top Button on Mobile Screens */
 @media (max-width: 768px) {
     .back-to-top {
-        display: none; /* Hide the floating button */
+        display: none; /* Hide the floating button on mobile */
     }
 
-    /* Footer version for mobile */
     .footer-back-to-top {
-        display: inline-block; /* Show the button in the footer */
-        background: none; /* No background */
-        color: #64ffda; /* Mint green text */
-        font-size: 1.2rem;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        border: none;
-        border-radius: 5px;
+        display: block; /* Show the footer version on mobile */
     }
+}
 
-    .footer-back-to-top:hover {
-        color: #50e5c1; /* Slightly lighter mint on hover */
-    }
-
-    /* Optionally add an icon for mobile */
-    .footer-back-to-top::before {
-        content: '\2191'; /* Unicode for upward arrow */
-        font-size: 1.5rem; /* Adjust size of the arrow */
-        margin-right: 0.5rem; /* Space between the arrow and text */
+/* Smaller mobile screen adjustments */
+@media (max-width: 480px) {
+    /* Optionally, hide the button on very small screens */
+    .footer-back-to-top {
+        font-size: 0.9rem; /* Smaller font size */
+        padding: 0.8rem; /* Slightly smaller padding */
     }
 }
 
@@ -579,10 +581,9 @@ span.onclick = function() {
 
 <footer>
     <p>&copy; 2025 Brandy Mercado | All Rights Reserved</p>
-    <!-- Mobile-specific Back to Top Button in Footer -->
+    <!-- Back to Top Button for Mobile -->
     <a href="#top" class="footer-back-to-top">Back to Top</a>
 </footer>
-
 
 
 <script>
