@@ -7,8 +7,6 @@
     <title>Brandy Mercado's Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-     <!-- Add Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Reset */
         * {
@@ -34,6 +32,30 @@
         a:hover {
             text-decoration: underline;
         }
+        
+/* Home Button in Header */
+.home-button {
+    background-color: #64ffda; /* Mint Green */
+    color: #0a192f;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #50e5c1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-button {
+        padding: 0.5rem 1rem; /* Smaller padding on mobile */
+        font-size: 0.9rem; /* Smaller font size on mobile */
+    }
+}
 
         /* Header */
         header {
@@ -396,58 +418,6 @@
     border-color: #64ffda; /* Mint Green border when focused */
 }
         
-/* Back to Top Button */
-/* Back to Top Button - Large Screens */
-.back-to-top {
-    position: fixed;
-    bottom: 20px; /* Adjust the distance from the bottom */
-    right: 20px; /* Adjust the distance from the right */
-    background-color: #64ffda; /* Mint Green */
-    color: #0a192f;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    display: none; /* Initially hidden */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/* Show the button when the user scrolls down */
-.back-to-top.show {
-    display: block;
-}
-
-/* Hover effect */
-.back-to-top:hover {
-    background-color: #50e5c1;
-    transform: scale(1.1);
-}
-
-/* Footer Back to Top Button - Mobile Only */
-.footer-back-to-top {
-    display: none; /* Hidden by default for all screens */
-    background-color: #64ffda; /* Mint Green */
-    color: #0a192f;
-    font-size: 1rem;
-    padding: 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    .back-to-top {
-        display: none; /* Hide the floating button on mobile */
-    }
-
-    .footer-back-to-top {
-        display: block; /* Show the footer version on mobile */
-    }
-}
-
-
-
 /* Smooth Scrolling */
         html {
             scroll-behavior: smooth;
@@ -456,11 +426,10 @@
 </head>
 
 <body>
-<!-- This goes at the very top of your body -->
-<div id="top"></div>
     <header>
         <div class="logo">BM</div>
         <nav>
+            <a href="#home" class="home-button" style="display: none;">Home</a>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -573,33 +542,30 @@ span.onclick = function() {
 
 <footer>
     <p>&copy; 2025 Brandy Mercado | All Rights Reserved</p>
-    <!-- Back to Top Button for Mobile -->
-    <a href="#top" class="footer-back-to-top">Back to Top</a>
 </footer>
 
-
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const backToTopButton = document.querySelector('.back-to-top');
+    document.addEventListener("DOMContentLoaded", function () {
+        const homeButton = document.querySelector('.home-button');
+        const heroSection = document.querySelector('.hero-section'); // Assuming your hero section has this class
 
-    // Show or hide the button based on scroll position
-    window.onscroll = function () {
-        if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
-            backToTopButton.classList.add('show');
-        } else {
-            backToTopButton.classList.remove('show');
-        }
-    };
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > heroSection.offsetHeight) {
+                homeButton.style.display = 'inline-block';
+            } else {
+                homeButton.style.display = 'none';
+            }
+        });
 
-    // Smooth scroll to top when the button is clicked
-    backToTopButton.addEventListener('click', function (event) {
-        event.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Optional: Smooth scroll back to the top when the button is clicked
+        homeButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            document.querySelector('#home').scrollIntoView({ behavior: 'smooth' });
+        });
     });
-});
-
 </script>
 
+    
 </body>
 <script>
     // JavaScript for modal
