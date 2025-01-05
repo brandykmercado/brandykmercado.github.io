@@ -425,7 +425,7 @@
 
 /* Footer Back to Top Button - Mobile Only */
 .footer-back-to-top {
-    display: none; /* Hidden by default */
+    display: none; /* Hidden by default for all screens */
     background-color: #64ffda; /* Mint Green */
     color: #0a192f;
     font-size: 1rem;
@@ -435,7 +435,7 @@
     text-align: center;
 }
 
-/* Show Footer Back to Top Button on Mobile Screens */
+/* Mobile adjustments */
 @media (max-width: 768px) {
     .back-to-top {
         display: none; /* Hide the floating button on mobile */
@@ -446,14 +446,6 @@
     }
 }
 
-/* Smaller mobile screen adjustments */
-@media (max-width: 480px) {
-    /* Optionally, hide the button on very small screens */
-    .footer-back-to-top {
-        font-size: 0.9rem; /* Smaller font size */
-        padding: 0.8rem; /* Slightly smaller padding */
-    }
-}
 
 
 /* Smooth Scrolling */
@@ -587,25 +579,23 @@ span.onclick = function() {
 
 
 <script>
-// Get the button
-const backToTopButton = document.querySelector('.back-to-top');
+document.addEventListener("DOMContentLoaded", function () {
+    const backToTopButton = document.querySelector('.back-to-top');
 
-// When the user scrolls down 200px, show the button
-window.onscroll = function () {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        backToTopButton.classList.add('show');
-    } else {
-        backToTopButton.classList.remove('show');
-    }
+    // Show or hide the button based on scroll position
+    window.onscroll = function () {
+        if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    };
 
-    // Reset the button's active state when scrolling resumes
-    backToTopButton.classList.remove('active');
-};
-
-// Scroll to top when the button is clicked
-backToTopButton.addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent default anchor behavior
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Smooth scroll to top when the button is clicked
+    backToTopButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 });
 
 </script>
