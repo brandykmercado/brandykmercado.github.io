@@ -33,30 +33,6 @@
             text-decoration: underline;
         }
         
-/* Home Button in Header */
-.home-button {
-    background-color: #64ffda; /* Mint Green */
-    color: #0a192f;
-    padding: 0.8rem 1.2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1rem;
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.home-button:hover {
-    background-color: #50e5c1;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .home-button {
-        padding: 0.5rem 1rem; /* Smaller padding on mobile */
-        font-size: 0.9rem; /* Smaller font size on mobile */
-    }
-}
-
         /* Header */
         header {
             position: fixed;
@@ -429,7 +405,7 @@
     <header>
         <div class="logo">BM</div>
         <nav>
-            <a href="#home" class="home-button" style="display: none;">Home</a>
+            <a href="#hero">Home</a>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -543,27 +519,6 @@ span.onclick = function() {
 <footer>
     <p>&copy; 2025 Brandy Mercado | All Rights Reserved</p>
 </footer>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const homeButton = document.querySelector('.home-button');
-        const heroSection = document.querySelector('.hero-section'); // Assuming your hero section has this class
-
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > heroSection.offsetHeight) {
-                homeButton.style.display = 'inline-block';
-            } else {
-                homeButton.style.display = 'none';
-            }
-        });
-
-        // Optional: Smooth scroll back to the top when the button is clicked
-        homeButton.addEventListener('click', function (event) {
-            event.preventDefault();
-            document.querySelector('#home').scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-</script>
 
     
 </body>
