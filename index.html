@@ -44,6 +44,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            line-height: 1; /* Keep consistent line height */
         }
 
         header .logo {
@@ -268,6 +269,20 @@
 @media screen and (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+        display: flex;
+        flex-wrap: wrap; /* Allow links to wrap if necessary */
+        justify-content: center; /* Center the links */
+    }
+
+    header nav a {
+        margin: 0.25rem; /* Smaller margin for mobile */
+        letter-spacing: 0.02rem; /* Further fine-tune for smaller screens */
+        padding: 0.5rem; /* Add padding for better touch targets */
+    }
+
+    header {
+        padding: 1rem; /* Add padding to prevent cut-off */
+        overflow: hidden; /* Ensure no overflow on small screens */
     }
 }
         
